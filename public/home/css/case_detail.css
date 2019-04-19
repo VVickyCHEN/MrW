@@ -1,0 +1,257 @@
+.content{
+    padding:80px 0;
+}
+.title{
+    margin-top:50px;
+    text-align: center;
+    font-size:24px;
+    color:#242424;
+}
+.label{
+    text-align:center;
+}
+.label>ul{
+    display: inline-block;
+}
+.label>ul>li{
+    float:left;
+    font-size:14px;
+    margin-right: 5px;
+    color:#999;
+}
+
+.label>ul>li:not(:last-of-type):after{
+    content: ",";
+}
+.label>ul>li a{
+    color:#999;
+}
+.label>ul>li.light a{
+    color:#edc734;
+}
+.describe{
+    color: #999;
+    width: 770px;
+    margin:30px auto 0 auto;
+    font-size:14px;
+}
+.buy{
+    width: 170px;
+    height:40px;
+    line-height:40px;
+    color:#0f1827;
+    background:#edc734;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    margin:45px auto;
+}
+.buy:hover{
+    background:#ffd73a;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.case_section{
+    margin-top: 30px;
+}
+.case_section img{
+    width: 100%;
+}
+.alert{
+    font-size:20px;
+    text-align:center;
+    padding:20px 0;
+}
+
+.back-top{
+    position: fixed;
+    right:20px;
+    bottom:60px;
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.4;
+    border:1px solid #ccc;
+    display: block;
+    height:40px;
+    line-height: 40px;
+    width:40px;
+    text-align: center;
+    border-radius: 5px;
+    background: #ccc;
+}
+.back-top:hover{
+    opacity: 0.8;
+}
+@media only screen and (max-width:768px) {
+    .content{
+        padding:2rem 0;
+    }
+    .title{
+        margin-top:5rem;
+        font-size:1.75rem;
+        line-height: 2.5rem;
+        padding:0 5%;
+    }
+    .label{
+        text-align:center;
+        padding:1rem 5% 0 5%;
+    }
+    .label>ul{
+        display: inline-block;
+    }
+    .label>ul>li{
+        float:left;
+        font-size:1.325rem;
+        margin-right:0.5rem;
+    }
+    .label>ul>li a{
+        color:#999;
+    }
+    .label>ul>li.light a{
+        color:#edc734;
+    }
+    .describe{
+        color: #999;
+        width: 90%;
+        margin:2rem auto 0 auto;
+        font-size:1.5rem;
+        line-height: 2rem;
+    }
+    .buy{
+        width: 12rem;
+        height:3.5rem;
+        line-height:3.5rem;
+        color:#0f1827;
+        background:#edc734;
+        display: block;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 1.75rem;
+        margin:3rem auto;
+    }
+    .buy:hover{
+        background:#ffd73a;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    .case_section{
+        text-align:center;
+    }
+    .case_section img{
+        width:94%;
+    }
+    .alert{
+        font-size:1.5rem;
+        padding:1rem 0;
+    }
+
+    .back-top{
+        right:20px;
+        bottom:20px;
+        font-size: 3rem;
+        opacity: 0.4;
+        height:3.5rem;
+        line-height:3.5rem;
+        width:3.5rem;
+    }
+}
+
+
+
+
+.case_section p{
+    text-align: justify;
+    text-indent: 2em;
+    margin-bottom: 5px;
+}
+.about:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.about ul li{
+    width: 25%;
+    float:left;
+    text-align: center;
+    margin-top: 50px;
+}
+.about ul li .about-li{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 1px #ccc;
+    margin: 0 auto;
+    font-size: 24px;
+    color: #666;
+}
+.about ul li .about-li span{
+    margin-top: 43px;
+    font-size: 36px;
+    color: #cf0f32;
+    display: block;
+}
+.label>ul>.about-title{
+    font-size: 20px;
+    color: #2d94ce;
+}
+.about-h1{
+    font-size: 35px;
+}
+.about-icon ul li{
+    width: 25%;
+    float:left;
+    text-align: center;
+    margin-top: 50px;  
+}
+.about-icon ul li img{
+    width: 130px;
+}
+.about-icon ul li p{
+    font-size: 20px;
+    font-weight: bold;
+}
+.about-icon:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.about-img img{
+    margin-top: 120px;
+    width: 100%;
+}
+@media only screen and (max-width:768px) {
+    .case_section{
+        padding: 20px;
+    }
+    .about ul li{
+        width: 50%;
+        float:left;
+        text-align: center;
+        margin-top: 50px;
+    } 
+    .about ul li .about-li{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: solid 1px #ccc;
+        margin: 0 auto;
+        font-size: 24px;
+        color: #666;
+    }
+    .about ul li .about-li span{
+            margin-top: 18px;
+    }
+    .about-icon ul li{
+        width: 33.3%;
+        float:left;
+        text-align: center;
+        margin-top: 20px;  
+    }
+    .about-icon ul li img{
+        width: 130px;
+    }
+
+}

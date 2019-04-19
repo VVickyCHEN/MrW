@@ -1,0 +1,8 @@
+.more{text-align: center;position: absolute;bottom: 20%;width: 100%;}
+.more a{color: #fff;font-size: 20px;border: solid 1px #fff;padding: 10px 15px;border-radius: 0.3em;}
+.more a:hover{background: #2d94ce;
+			-webkit-transition:background .5s linear;
+			-o-transition:background .5s linear;
+			-moz-transition:background .5s linear;
+			transition:background .5s linear;
+		}
