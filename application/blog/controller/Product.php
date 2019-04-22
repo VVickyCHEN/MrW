@@ -60,5 +60,9 @@ class Product extends BlogController {
       
     }
 
+    public function detail(){
+        return $this->fetch();
+    }
+
    
 }

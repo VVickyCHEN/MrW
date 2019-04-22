@@ -30,8 +30,7 @@
         <div class="layui-input-block">
             <select id="category_id" lay-filter="category_id">
                 {foreach category_list as $vo}
-                <option value="{$vo.id|default=''}" {if !empty($case.category_id) and $case.category_id eq $vo.id}selected{
-                /if}>{$vo.title|default=''}</option>
+                <option value="{$vo.id|default=''}" {if !empty($case.category_id) and $case.category_id eq $vo.id}selected{/if}>{$vo.title|default=''}</option>
                 {/foreach}
             </select>
         </div>

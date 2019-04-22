@@ -9,6 +9,7 @@
 
 ## 系统环境及安装
  + git clone https://gitee.com/zhongshaofa/99Blog.git，或者直接下载安装包
+ + 安装完毕后可以使用PHP5.6
  + 环境推荐PHP7.0版本以上 + Apache（Nginx也可以）
  + 网站入口请部署至public文件夹下（即 99Blog/public 目录下）
  + 运行安装目录，运行 http://域名/install（例如：https://blog.99php.cn/install） 即可进行根据提示进行安装
