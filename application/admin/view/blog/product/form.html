@@ -30,8 +30,10 @@
         <div class="layui-input-block">
             <select id="category_id" lay-filter="category_id">
                 {foreach category_list as $vo}
-                <option value="{$vo.id|default=''}" {if !empty($product.category_id) and $product.category_id eq $vo.id}selected{
-                /if}>{$vo.title|default=''}</option>
+
+                    <option value="{$vo.id|default=''}" {if !empty($product.category_id) and $product.category_id eq $vo.id}selected{/if}>
+                        {$vo.title|default=''}
+                    </option>
                 {/foreach}
             </select>
         </div>
@@ -151,10 +153,6 @@
          * 添加产品
          */
         $("#submitBtn").click(function () {
-            if (editor.txt.text() == '') {
-                $.msg.error('产品内容不可为空！');
-                return false;
-            }
             var data = {
                 product_id: $('#id').val(),
                 title: $('#title').val(),

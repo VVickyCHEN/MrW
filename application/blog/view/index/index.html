@@ -1,445 +1,257 @@
-<!DOCTYPE html>
-<html class="js">
- <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
-  <meta name="renderer" content="webkit" /> 
-  <meta name="format-detection" content="telephone=no, email=no" /> 
-  <meta name="keywords" content="网站建设，广州网站建设，APP开发，广州APP开发，平面设计，广州平面设计，UI设计，广州UI设计，广州得翼，广州得翼网络，广州得翼网络科技有限公司，guangzhoudeyi" /> 
-  <meta name="description" content="" /> 
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0" /> 
-  <meta name="applicable-device" content="pc,mobile" /> 
-  <title>首页 | 广州得翼网络科技有限公司</title> 
-  <link rel="shortcut icon" href="__PUBLIC__/home/images/icon.png" type="image/x-icon" /> 
-  <link rel="icon" href="__PUBLIC__/home/images/icon.png" type="image/x-icon" /> 
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/neat.css" /> 
-  <link rel="stylesheet" href="__PUBLIC__/home/css/responsive-nav.css" /> 
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/animate.min.css" /> 
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/jquery.fullPage.css" /> 
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/swiper-3.4.0.min.css" /> 
-  <link href="__PUBLIC__/home/css/layer.css" rel="stylesheet" /> 
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/index.min.css" /> 
-  <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/style.css" /> 
-  <style>
-    .friendly-link{
-        /*border:1px solid red;*/
-        position: relative;
-        z-index: 100;
-        font-size: 12px;
-        color: #fff;
-        text-align:center;
-        margin-top:50px ;
-    }
-    .friendly-link a{
-        color: #fff;
-    }
-    .friendly-link a:hover{
-        text-decoration: underline;
+{extend name="blog@public/basic" /}
+{block name="cotent"}
 
-    }
-</style> 
+<img src="__PUBLIC__/picture/a1_1.jpg" alt="微商云仓系统，微商管理系统，微商新零售商城！" width="100%">
+<style type="text/css">
+    .main{width: 100%;height: auto;}
+    .main .col{padding: 40px 0;overflow: hidden;}
+    .main .col .title{text-align: center;margin-bottom: 30px;}
+    .main .col .title h2{font-size: 36px;line-height: 60px;color: #4f5b6c;letter-spacing: 2px;}
+    .main .col .title p{font-size: 18px;line-height: 30px;color: #545454;}
+    .main .col .title span{color: #2d93ce;}
+    .moshi ul {}
+    .moshi ul li{width: 20%;float: left;position: relative;text-align: center;}
+    .moshi ul li a{display: block;margin: 10px;padding: 30px 10px;border: 1px solid #bbb;box-shadow: 0px 0px 10px rgba(0,0,0,.3);}
+    .moshi ul li a h3{font-size: 20px;font-weight: 800;color: #333;line-height: 30px;}
+    .moshi ul li a .img{padding: 15px;}
+    .moshi ul li a .img img{}
+    .moshi ul li a p{color: #666;margin-bottom: 15px;}
+    .moshi ul li a span{padding: 6px 16px;color: #fff; background: #44A75A;}
+    .moshi ul li a span:hover{background: #37b854;}
+</style>
 
-  <link rel="stylesheet" href="__PUBLIC__/home/css/layer.css" id="layui_layer_skinlayercss" style="" />
- </head> 
- 
- <body class="fp-viewing-0"> 
-  <div id="loading" class="ld"> 
-   <div class="ld_main"> 
-    <ul> 
-     <li><img src="__PUBLIC__/home/images/loading_logo.png" alt="广州得翼网络科技有限公司" /></li> 
-     <li><img src="__PUBLIC__/home/images/loading.gif" alt="加载中" /></li> 
-    </ul> 
-   </div> 
-  </div> 
-  <h1 style="height: 0;width: 0;overflow: hidden;">广州得翼网络科技有限公司</h1> 
-  <div class="low-ie" style="display: none;">
-   请升级浏览器或用主流浏览器浏览
-  </div> 
-  <img src="__PUBLIC__/home/images/gnm_logo.jpg" alt="广州得翼网络科技有限公司" style="display: none;" /> 
-  <div class="header"> 
-   <div class="logo"> 
-    <h2><img src="__PUBLIC__/home/images/logo.png" alt="广州得翼网络科技有限公司" /></h2> 
-   </div> 
-   <div class="nav nav-collapse nav-collapse nav-collapse-0 closed"> 
-    <ul> 
-        <li class="active"> <a href="{:url('@blog/index')}">首页</a> </li> 
-        <li> <a href="{:url('@blog/product')}">产品中心</a> </li> 
-        <li> <a href="{:url('@blog/about')}">关于我们</a> </li>
-        <li> <a href="{:url('@blog/contact')}">联系我们</a> </li>
-    </ul> 
-   </div> 
-  </div> 
+<div class="main">
+  <div class="col clearfix global_width">
+        <div class="title">
+            <h2>我们的<span>服务</span></h2>
+            <p></p>
+        </div>
+        <div class="wrp1150">
+            <div class="moshi clearfix">
+                <ul>
+                    <li class="animated pulse">
+                        <a href="#" title="微商管理系统">
+                            <h3>微商管理系统</h3>
+                            <div class="img">
+                                <img src="__PUBLIC__/picture/p01.png" alt="微商管理系统">
+                            </div>
+                            <p>微商控价系统<br>新零售系统</p>
+                            <!-- <span title="查看详情">查看详情</span> -->
+                        </a>
+                    </li>
+                    <li class="animated pulse">
+                        <a href="#" title="全网推广服务">
+                            <h3>全网推广服务</h3>
+                            <div class="img">
+                                <img src="__PUBLIC__/picture/p02.png" alt="全网推广服务">
+                            </div>
+                            <p>搜索引擎关键词推广<br>大数据精准营销推广</p>
+                            <!-- <span title="查看详情">查看详情</span> -->
+                        </a>
+                    </li>
+                    <li class="animated pulse">
+                       <a href="#" title="微商分销系统">
+                            <h3>微商分销系统</h3>
+                            <div class="img">
+                                <img src="__PUBLIC__/picture/p03.png" alt="微商分销系统">
+                            </div>
+                            <p>自由的分销返利分红<br>快速搭建您的分销商城</p>
+                            <!-- <span title="查看详情">查看详情</span> -->
+                        </a>
+                    </li>
+                    <li class="animated pulse">
+                      <a href="#" title="小程序开发">
+                            <h3>小程序开发</h3>
+                            <div class="img">
+                                <img src="__PUBLIC__/picture/p04.png" alt="小程序开发">
+                            </div>
+                            <p>快速、高效、稳定<br>快速拥有你自己的小程序</p>
+                            <!-- <span title="查看详情">查看详情</span> -->
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="#" title="高端定制开发">
+                            <h3>高端定制开发</h3>
+                            <div class="img">
+                                <img src="__PUBLIC__/picture/p05.png" alt="高端定制开发">
+                            </div>
+                            <p>专业定制开发电商项目<br>管理软件等</p>
+                            <!-- <span title="查看详情">查看详情</span> -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-  <div id="page" class="fullpage fullpage-wrapper"> 
-   <div class="section banner_01"> 
-    <div class="swiper-container"> 
-     <div class="swiper-wrapper">
-      <div class="swiper-slide third"> 
-       <a href="#" target="_blank"> 
-        <div class="third_center"> 
-         <div class="third_left animated"> 
-          <h2>系统开发 <span><img src="__PUBLIC__/home/images/app-title.png" alt="原创精品,高端定制" /></span></h2> 
-          <h5>系统定制只信任 <span>得翼</span>，您的选择，我们的承诺；</h5> 
-          <h5>专业团队为您提供完美解决方案</h5> 
-          <a target="_blank" style="color:#fff" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1486111354&amp;site=qq&amp;menu=yes"><span class="btn">马上联系</span></a>
-         </div> 
-         <div class="third_right animated"> 
-          <img src="__PUBLIC__/home/images/app_iphone.png" alt="" /> 
-         </div> 
-        </div> </a> 
-      </div>  
-      <div class="swiper-slide first"> 
-       <div class="f_center"> 
-        <h2>+</h2> 
-        <h2 class="wel animated">Welcome to <span>专业团队.</span></h2> 
-        <p class="animated">得翼拥有国内领先的云计算开发，移动互联网研发，网络通讯技术，信息编码技术，携手国内顶尖技术团队和资深品牌推广团队，助力品牌商，从管理系统、营销系统、防伪系统、底层+高端定制开发、品牌营销推广等方面提供全面前沿的技术服务支持，帮助企业品牌做大做强。</p> 
-       </div> 
-      </div>
-   
-     </div> 
-     <div class="swiper-pagination"></div> 
-<!--      <div class="swiper-button-prev swiper-prev"></div> 
-     <div class="swiper-button-next swiper-next"></div>  -->
-    </div> 
-   </div> 
-   <div class="section banner_02 fp-section"> 
-    <div class="banner_title"> 
-     <h4>SCOPE OF SERVICE</h4> 
-     <h4><span>服务</span>范围</h4> 
-    </div> 
-    <div class="service"> 
-     <ul class="service_list"> 
-
-      <li class="animated"> 
-       <div class="service_block"> 
-        <div class="w_bg"> 
-         <span><i class="iconfont"></i></span> 
-         <h5>控价系统</h5> 
-         <h6>ANGLO-AMERICAN SYSTEM</h6> 
-         <div class="hide"> 
-          <div class="line"></div> 
-          <h5>微商控价</h5> 
-          <h5>微商授权</h5> 
-          <h5>微商防伪</h5> 
-         </div> 
-        </div> 
-       </div> 
-     </li> 
-      <li class="animated"> 
-       <div class="service_block"> 
-        <div class="w_bg"> 
-         <span><i class="iconfont"></i></span> 
-         <h5>云仓系统</h5> 
-         <h6>YNUCANG-SYSTEM</h6> 
-         <div class="hide"> 
-          <div class="line"></div> 
-          <h5>云仓管理</h5> 
-          <h5>虚拟币</h5> 
-         </div> 
-        </div> 
-       </div> 
-     </li> 
-      <li class="animated"> 
-       <div class="service_block"> 
-        <div class="w_bg"> 
-         <span><i class="iconfont"></i></span> 
-         <h5>分销系统</h5> 
-         <h6>DISTRIBUTION-SYSTEM </h6> 
-         <div class="hide"> 
-          <div class="line"></div> 
-          <h5>分销</h5> 
-          <h5>返利</h5> 
-          <h5>分红</h5> 
-         </div> 
-        </div> 
-       </div> 
-     </li> 
-      <li class="animated"> 
-       <div class="service_block"> 
-        <div class="w_bg"> 
-         <span><i class="iconfont"></i></span> 
-         <h5>门店系统</h5> 
-         <h6>STORE-SYSTEM</h6> 
-         <div class="hide"> 
-          <div class="line"></div> 
-          <h5>在线预约</h5> 
-          <h5>人员管理</h5> 
-          <h5>管理门店</h5> 
-         </div> 
-        </div> 
-       </div> 
-     </li> 
-     </ul> 
-    </div> 
-    <div class="more">
-      <a href="javascript:;">更多服务</a>
     </div>
-   </div> 
-   <div class="section banner_03 fp-section"> 
-    <div class="banner_title"> 
-     <h4>CLASSIC CASES</h4> 
-     <h4><span>经典</span>案例</h4> 
-    </div> 
-    <div class="cases_block animated "> 
-     <ul class="title_img"> 
-    <!--   <li class="active"><a href="javascript:;" title="PC端" data-num="01"><i class="iconfont"></i></a></li> 
-      <li><a href="javascript:;" title="手机端" data-num="02"><i class="iconfont"></i></a></li> 
-      <li><a href="javascript:;" title="仪器设备" data-num="03"><i class="iconfont"></i></a></li> 
-      <li><a href="javascript:;" title="平面类" data-num="04"><i class="iconfont"></i></a></li>  -->
-     </ul> 
-     <div class="cases_box"> 
-      <div class="box_01"> 
-       <div class="swiper-cases01 swiper-container-horizontal"> 
-        <div class="swiper-wrapper"> 
- 
-        {volist name='casement_list' id='vo' key='k'}
-         <div class="swiper-slide"> 
-          <div class="case_content"> 
-           <a href="javascript:;" style="background-image: url({$vo.cover_img|default=''});" target="_blank"> 
-            <div class="case_bottom"> 
-             <h4>得翼<span> • </span>{$vo.category_name}</h4> 
-             <h5> 
-              {empty name="vo.tag_title"}
-          
-              {else /}
+    </div>
+    <div class="wrp1150">
+<!--      <div class="mianfei_ban">
+  
+    </div> -->
+        <div class="mianfei_sum">
+            <div class="sum_img fl">
+                <img src="__PUBLIC__/picture/jieshao001.png" alt="微商云仓系统，微商管理系统，微商新零售商城！">
+            </div>
+            <div class="sum_txt fl">
+                <div class="sum_txt_col">
+                    <h2>微商控价系统、微商管理系统、微商云仓系统、微商新零售商城！</h2>
+                    <p>得翼微商云仓系统是由广州得翼网络有限公司专业技术团队开发，着力于有效解决企业及代理商营销过程中各个环节遇到的难点问题，将代理授权管理、订单管理、财务对账管理、防伪溯源、乱价管控、返利模式定制、在线支付、实时物流等信息汇集于一体，本着方便快捷处理信息，大量节省企业人力，物力，财力方面成本，助企业打造精英微商精英团队。<br>得翼微商云仓系统包含多品牌管理、多级代理商管理、订单管理、云仓仓储、溯源防伪管理系统、财务资金管理、多种返利模式系统、多渠道分销商城、数据统计系统、推广引流系统、实时在线数据分析系统等强大功能，同时可以切合企业需求提供定制化服务、并不断改造升级，全方位助力于企业全网营销。
+                       </p>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both"></div>
+        <div class="mianfei_ld">
+            <h2>微商云仓系统十八大核心功能 让微商更轻松！</h2>
+            <p class="p">(得翼微商管理系统目前提供15大功能模块)</p>
+              <ul>
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_01.png" alt="代理授权管理"></div>
+                    <h3>微商代理授权管理</h3>
+                        <p>A、多品牌授权，即一个公司经营多个品牌，只需在系统自助添加即可以完成一个系统同时运营N个品牌。</p>
+                        <p>B、代理授权书自动生成，简单、快捷、方便，可自助保存高清电子授权书。</p>
+                        <p>C、代理招募、代理推荐关系一目了然，谁是团队精英，谁值得扶持了如指掌！</p>
+                </li>
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_z1.png" alt="代理授权查询"></div>
+                    <h3>微商代理授权查询</h3>
+                    <p>A、新招代理、新顾客如怀疑销售代理的真实性，通过查询代理信息解除疑惑，放心购买品牌正品。</p>
+                    <p>B、冒牌代理商一查便知，预防代理、顾客上当受骗！</p>
+                </li>
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_03.png" alt="商品闪电打假"></div>
+                    <h3>微商商品闪电打假</h3>
+                    <p>每件产品都与正规代理商绑定，顾客购买后即可查询代理信息、官方销售价格；山寨或黑名单代理产品均查询不到授权信息，让假货仿货滚粗去</p>
+                </li>
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_04.png" alt="商品控价防窜"></div>
+                    <h3>微商商品控价防窜</h3>
+                    <p>A、每件商品绑定正规授权代理，只有正规的代理才能流通产品，而且商品只能往自已的下级流通，禁止窜货发货。</p>
+                    <p>B、商品显示官方统一价格，顾客购买商品后可扫码查询出售产品与代理是否一致，价格是否标准，并能作出监督的作用。</p>
+                    <p>C、官方绑定每个代理的提货价格，每次提货是否异常一清二楚！</p>
+                </li>
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_05.png" alt="订单提货管理"></div>
+                    <h3>下单提货管理</h3>
+                    <p>A、代理商可自助下单提货,订单审核，发货、拒绝等都有相应消息提醒！</p>
+                    <p>B、查看下级代理的订货价格等。</p>
+                    <p>C、代理商可以查看处理下级代理的订单,  随时随地接单，发货，不错过每一笔生意！</p>
+                </li>
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_06.png" alt="代理扫码发货"></div>
+                    <h3>代理扫码发货</h3>
+                    <p>一物一码，扫描商品二维码发货，代理只需一台移动设备即可完成发货，可以连续扫货，可扫描物流单录入等</p>
+                </li>
 
-                {foreach vo.tag_title as $v}
-                <span>{$v}</span>
-                {/foreach}  
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_z2.png" alt="订单代发调货"></div>
+                    <h3>订单代发调货</h3>
+                    <p>自己手上没货，可以向上级申请代发调货，可以实现代理0库存</p>
+                </li>
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_z3.png" alt="代理库存管理"></div>
+                    <h3>代理库存管理</h3>
+                    <p>每一级代理商的产品入库数量，产品出库数量都有详细的数据记录，哪个代理销售业绩比较理想，哪个代理是否有囤货让您了如指掌。</p>
+                </li>
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_z4.png" alt="财务对账管理"></div>
+                    <h3>财务对账管理</h3>
+                    <p>代理预存款充值、利润回款，奖金奖励，动销记录，提现记录，总部对账等。</p>
+                </li>
 
-              {/empty}
-             </h5>  
-            </div> 
-            <div class="hide_main"> 
-             <div> 
-              <h3>{$vo.title|default=''}</h3> 
-              <h5>
-                {empty name="vo.tag_title"}
-          
-                {else /}
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_z5.png" alt="代理返利政策"></div>
+                    <h3>代理返利政策</h3>
+                    <p>推荐奖、一次性管理奖，订单奖励，级差奖励，同级推荐奖励，升级奖励，业绩奖励，分红奖励、团队奖励等等，总有一样适合您的团队；同时支持定制开发，我们的专业正好您需要！</p>
+                </li>
+                  <li>
+                    <div><img src="__PUBLIC__/picture/icon_z6.png" alt="数据统计"></div>
+                    <h3>数据统计</h3>
+                    <p>一切您想了解的数据，我们都帮您以多样化的形式展现出来（柱状图、折线图、饼图等）让您对您的生意运营状况了如指掌，方可针对性的做出决策！</p>
+                </li>
+                 <li>
+                    <div><img src="__PUBLIC__/picture/icon_08.png" alt="微官网"></div>
+                    <h3>微官网</h3>
+                    <p>企业微官网品牌网站展示，提供多种风格选择，模块包含：公司简介，产品中心，违规通告，投诉建议、买家秀，视频欣赏，新闻动态、微信关注等。</p>
+                </li>
 
-                  {foreach vo.tag_title as $v}
-                  <span>{$v}</span>
-                  {/foreach}  
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_09.png" alt="引流神器"></div>
+                    <h3>引流神器</h3>
+                    <p>代理商引流工具，提升销量，粉丝倍增！</p>
+                </li>
 
-                {/empty}
-              </h5>
-             </div> 
-            </div> 
-            <div class="hide_left"> 
-             <span class="san01"></span> 
-             <h4>{$k}号</h4> 
-            </div> 
-            <div class="hide_right"> 
-             <span class="san02"></span> 
-             <h4>品牌合作</h4> 
-            </div> </a> 
-          </div> 
-         </div> 
-        {/volist} 
-     
-        </div> 
-       </div> 
-      </div>  
-     </div> 
-<!--      <a href="http://gunaimu.com/portfolio" class="more">查看更多</a>  -->
-    </div> 
-   </div> 
-   <div class="section banner_04 fp-section"> 
-    <div class="banner_title"> 
-     <h4>COOPERATIVE CLIENT</h4> 
-     <h4>合作<span>品牌</span></h4> 
-    </div> 
-    <div class="client_box"> 
-     <ul class="client_list"> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/1.png" alt="" /></li> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/2.png" alt="" /></li> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/3.png" alt="" /></li> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/4.png" alt="" /></li> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/5.png" alt="" /></li> 
-      <li class="right animated"><img src="__PUBLIC__/home/images/logo/6.png" alt="" /></li> 
-      <li class="right animated"><img src="__PUBLIC__/home/images/logo/7.png" alt="" /></li> 
-      <li class="right animated"><img src="__PUBLIC__/home/images/logo/8.png" alt="" /></li> 
-      <li class="right animated"><img src="__PUBLIC__/home/images/logo/9.png" alt="" /></li> 
-      <li class="right animated"><img src="__PUBLIC__/home/images/logo/10.png" alt="" /></li> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/11.png" alt="" /></li> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/12.png" alt="" /></li> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/13.png" alt="" /></li> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/14.png" alt="" /></li> 
-      <li class="left animated"><img src="__PUBLIC__/home/images/logo/15.png" alt="" /></li> 
-     </ul> 
-     <div class="move_bg"></div> 
-    </div> 
-   </div> 
-   <div class="section banner_05 fp-section" style="height: 974px;"> 
-    <div class="main" style="margin-top: 165px;"> 
-     <div class="up"> 
-      <div class="up_center"> 
-       <div class="introduce animated "> 
-        <h3>ABOUT US</h3> 
-        <h3>关于<span>我们</span></h3> 
-        <p>广州得翼网络有限公司是一家以帮助中小企业崛起，打造中国品牌，制造影响力为己任的公司。拥有国内领先的云计算开发，移动互联网研发，网络通讯技术，信息编码技术，携手国内顶尖技术团队和资深品牌推广团队，助力品牌商，从管理系统、营销系统、防伪系统、底层+高端定制开发、品牌营销推广等方面提供全面前沿的技术服务支持，帮助企业品牌做大做强。本公司业务已拓展至物联网、智能硬件开发、科技咨询服务等领域，产品和服务面向所有行业，受到各行业客户的广泛好评，市场前景异常广阔。现得翼网络以该专业的营销团队+IT技术人才为基础。我们将围绕“厚德”、“诚信”、“利他”、“极致”为服务核心，为客户提供高端技术系统开发，品牌营销推广一体化服务，创造互利共赢的合作平台。得翼网络从企业实际需求出发，实现企业的系统开发与营销推广效果最大化，让互联网成为合作客户拓展业务的实用工具。得翼网络还为员工提供宽阔的发展空间以及营造激情活跃的团队氛围，让员工在快乐工作的同时迅速成长和实现自我价值！企业使命：制作影响力，助力中国品牌商全球化发展、企业愿景：成为国内领先的移动互联网技术服务提供商、企业价值观：“厚德”、“诚信”、“利他”、“极致”。</p> 
-       </div> 
-       <ul class="honor animated "> 
-        <li><h5>公司福利</h5></li> 
-        <li> <h6>集体温泉集会</h6> <span>2016.07.08</span> </li> 
-        <li> <h6>集体户外体验</h6> <span>2017.08.18</span> </li> 
-        <li> <h6>集体国外出游</h6> <span>2018.09.28</span> </li> 
-       </ul> 
-      </div> 
-     </div> 
-     <div class="down"> 
-      <div class="down_center animated "> 
-       <div class="swiper-container-mini"> 
-        <div class="swiper-wrapper"> 
-         <div class="swiper-slide" >
-          <img src="__PUBLIC__/home/images/us_01.jpg" alt="" />
-         </div> 
-         <div class="swiper-slide">
-          <img src="__PUBLIC__/home/images/us_02.jpg" alt="" />
-         </div> 
-         <div class="swiper-slide">
-          <img src="__PUBLIC__/home/images/us_03.jpg" alt="" />
-         </div> 
-         <div class="swiper-slide">
-          <img src="__PUBLIC__/home/images/us_04.jpg" alt="" />
-         </div> 
-        </div> 
-        <div class="swiper-button-prev arrow-left"></div> 
-        <div class="swiper-button-next arrow-right"></div> 
-       </div> 
-       <div class="bg_top"></div> 
-       <div class="bg_bottom"></div> 
-       <div class="bg_center"></div> 
-      </div> 
-     </div> 
-    </div> 
-   </div> 
-   <div class="section banner_06 fp-section" style="height: 974px;"> 
-    <div class="about_box"> 
-     <div class="about_left animated "> 
-      <h3>CONTACT US</h3> 
-      <h3><span>联系</span>我们</h3> 
-      <ul class="company_info"> 
-         <li><i class="iconfont"></i>卓经理：18620075349</li> 
-         <li><i class="iconfont"></i>黄经理 ：15814868715</li> 
-         <li><i class="iconfont"></i>地址：广东省广州市白云区永泰商务中心B219</li> 
-         <li><i class="iconfont"></i>QQ：1486111354 / 1491665985</li> 
-         <li><i class="iconfont"></i>联系邮箱：1486111354@qq.com / 1486111354@qq.com</li> 
-      </ul>  
-      <p>Copyright &copy; 2016-2026广州得翼网络科技有限公司 版权所有  <a href="http://www.miitbeian.gov.cn" style="color:#fff">粤ICP备17015772号</a></p> 
-     </div> 
-     <div class="about_right animated "> 
-      <form name="contact-form" id="contact-form" action="cerate" method="post"> 
-       <ul> 
-        <li><input type="text" name="nickname" placeholder="您的姓名：" /></li> 
-        <li><input type="text" name="contact" placeholder="您的联系方式：" /></li> 
-        <li><textarea name="content" placeholder="您的需求或者建议："></textarea></li> 
-        <li><input type="submit" value="提交" /></li> 
-       </ul> 
-      </form> 
-     </div> 
-    </div> 
-    <div class="friendly-link">
-      友情链接： 
-     <a href="http://zhuoxiansheng.vip/">微商控价系统</a> 
-    </div> 
-    <div class="map_block"></div> 
-   </div> 
-  </div> 
-  <div class="fixed_group"> 
-   <div class="right_line"></div> 
-   <div class="bottom_left"></div> 
-   <div class="bottom_center"></div> 
-   <div class="bottom_right"></div> 
-   <div class="center_tips"> 
-    <span class="mouse" style="opacity: 1;"><i class="iconfont"></i></span> 
-    <a href="javascript:;" class="back" onclick="backTop();" style="opacity: 0; z-index: 140;"><i class="iconfont"></i><span>返回顶部</span></a> 
-   </div> 
-   <div class="tel" style="left: 82%;"> 
-    <i class="iconfont"></i> 
-    <div class="tel_box"> 
-     <div class="bg"> 
-      <h6><i class="iconfont"></i>免费咨询热线：</h6> 
-      <h4>18620075349</h4>
-      <h4>15814868715</h4> 
-     </div> 
-     <span class="san"></span> 
-    </div> 
-   </div> 
-   <div class="qq" style="left:85.5%;"> 
-    <i class="iconfont"><img src="__PUBLIC__/home/images/wechat.png" alt="" style='width: 40px;margin-top: 20px;'></i> 
-    <div class="qq_box" style="height: 222px;"> 
-     <div class="bg" style="height: 192px;"> 
-      <h6>扫码加微信</h6> 
-      <div class="btn_g"> 
-          <img src="__PUBLIC__/home/images/wechat.jpg" alt="" style='width:60%'>
-      </div> 
-     </div> 
-     <span class="san"></span> 
-    </div> 
-   </div> 
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_10.png" alt="微商学院/素材"></div>
+                    <h3>微商学院/素材</h3>
+                    <p>代理培训课件，包括视频，语音，图片等，实时上传亮点素材！</p>
+                </li>
 
-   <div class="qq" style="left:89%;"> 
-    <i class="iconfont"></i> 
-    <div class="qq_box"> 
-     <div class="bg"> 
-      <h6><i class="iconfont"></i>QQ免费咨询</h6> 
-      <h6>在线沟通，请点击</h6> 
-      <div class="btn_g"> 
-        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1486111354&amp;site=qq&amp;menu=yes">卓经理</a> 
-       <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1491665985&amp;site=qq&amp;menu=yes">黄经理</a>  
-    <!--     <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1491665985&amp;site=qq&amp;menu=yes">黄小姐</a>   -->
-      </div> 
-     </div> 
-     <span class="san"></span> 
-    </div> 
-   </div>
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_11.png" alt="云仓系统/出入仓"></div>
+                    <h3>云仓系统/出入仓</h3>
+                    <p>代理可自助在云仓系统进货、入仓，自动结算奖金、利润、库存等数据。真正做到高自动化，节省大量人力、物力！</p>
+                </li>
 
-  </div> 
-  <div class="fixed-bottom"> 
-   <a class="m-tel" href="javascript:;">联系我们吧！</a> 
-   <a class="m-qq" href="javascript:;"><i class="iconfont"></i></a> 
-   <div class="m-back">
-    返回
-   </div> 
-   <div class="slideUp"> 
-    <div class="m-code-box"> 
-     <div class="m-code-center"> 
-      <div class="process"> 
-       <h4>1.按住二维码保存到手机</h4> 
-       <h4>2.打开微信扫码图片</h4> 
-      </div> 
-      <div class="m-code-img"> 
-       <img class="tCode" src="__PUBLIC__/home/images/wechat.jpg" /> 
-       <span></span> 
-       <h5>得翼卓经理</h5> 
-      </div> 
-      <div class="code-arrow"></div> 
-     </div> 
-    </div> 
-    <div class="m-contact-list"> 
-     <img class="middle" src="__PUBLIC__/home/images/m_contact.png" /> 
-     <ul> 
-      <li> <h5>卓经理</h5> <a href="tel:18620075349"><i class="iconfont"></i>电话</a> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1486111354&amp;site=qq&amp;menu=yes"><i class="iconfont"></i>QQ</a> </li> 
-      <li> <h5>黄经理</h5> <a href="tel:15814868715"><i class="iconfont"></i>电话</a> <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=1491665985&amp;site=qq&amp;menu=yes"><i class="iconfont"></i>QQ</a> </li> 
-     </ul> 
-    </div> 
-   </div> 
-  </div> 
-  <script src="__PUBLIC__/home/js/jquery-1.11.3.min.js"></script> 
-  <script type="text/javascript">
-        $(window).load(function(){
-            $('.preloader').fadeOut(500); // set duration in brackets
-        });
-        var initMsg = "";
-    </script> 
 
-  <script src="__PUBLIC__/home/js/jquery.fullPage.min.js"></script> 
-  <script src="__PUBLIC__/home/js/swiper-3.4.0.min.js"></script> 
-  <script src="__PUBLIC__/home/js/layer.js" type="text/javascript"></script> 
-  <script src="__PUBLIC__/home/js/index.min.js"></script> -->
-  <script src="__PUBLIC__/home/js/responsive-nav.min.js"></script> 
-  <script src="__PUBLIC__/home/js/common.js"></script> 
- </body>
-</html>
+                 <li>
+                    <div><img src="__PUBLIC__/picture/icon_13.png" alt="代理圈系统"></div>
+                    <h3>代理圈系统</h3>
+                    <p>建立品牌专属朋友圈，最大化代理互动平台，提升代理活跃度！</p>
+                </li>
+
+                <li>
+                    <div><img src="__PUBLIC__/picture/icon_14.png" alt="代理专属分销商城"></div>
+                    <h3>代理专属分销商城</h3>
+                    <p>给每一个正式授权的代理提供专属的分销商城，充分利用期社交圈，通过裂变的方式吸引C端用户，真正做到微商新零售！</p>
+                </li>
+
+
+
+
+
+            </ul>
+        </div>
+        <div class="mianfei_kd" style="clear:both">
+            <div>
+                <div class="kd_img fl1">
+                    <img src="__PUBLIC__/picture/jieshao_1.png" alt="十八大功能模块着力解决了微商品牌代理管控的六大痛点"  width="300px">
+                </div>
+                <div class="kd_txt fl1">
+                    <h2>微商云仓系统着力解决了微商品牌代理管控的八大痛点：</h2>
+                    <p>1、<strong>低价乱价</strong>——导致企业产品无利可谋；打击代理积极性，品牌生命力衰退；<br>
+                       2、<strong>串货水货</strong>——破坏线上线下代理利益均衡，迫使两端渠道管理紊乱；<br>
+                       3、<strong>假货仿货</strong>——使消费者对品牌失去信任；<br>
+                       4、<strong>非假授权</strong>——不受管控大肆倾销产品，品牌价格体系遭到严重破坏；<br>
+                       5、<strong>囤货严重</strong>——产品销售无门，代理囤货严重，代理因赚不到钱而流失；<br>
+                       6、<strong>库存压力</strong>——库存量无法精准，造成供过于求，库存积压严重，造成资源浪费！<br>
+                       7、<strong>资料流失</strong>——代理商、买家资料缺失，很难进行资源整合。<br>
+                       8、<strong>招商困难</strong>——品牌粘度不够，导致许多大代理团队纷纷转型做品牌；其次是红利期过去，赚钱效应减少，微商小白死速变快。<br>
+                    </p>
+
+                    <strong>得翼微商云仓管理系统让微商品牌企业轻松管理上千代理商，规范市场维护品牌形象，节省人力、物力、财力成本。</strong>
+                </div>
+            </div>
+            <div>
+                <div class="kd_img fl1">
+                    <img src="__PUBLIC__/picture/jieshao_2.png" width="300px" alt="为什么选择我们？">
+                </div>
+                <div class="kd_txt fl1">
+                    <h2 style="color:red;">为什么选择微商云仓系统？</h2>
+                    <p>1、 <strong>成本优势：</strong>相比品牌商自己团队操作要节省人力、物力、财力成本。<br>
+                       2、 <strong>技术优势：</strong>自主研发微商管理系统，支持量身定制服务，是其他同类服务商无可比拟的。<br>
+                      3、 <strong>效率优势：</strong>相比人工处理，周期长效率低，操作繁琐，我们系统批量处理，自动生成，效率高。<br>
+                      4、 <strong>性价比优势：</strong>专业度不够将事倍功半，交给更专业的我们，省心省力省时！相比同类服务商，我们性价比更高。<br>
+                      5、<strong>服务能力的优势：</strong>上千家微商品牌商选择我们作为长期合作伙伴！</p>
+                </div>
+            
+            </div>
+            <div>
+                <img src="__PUBLIC__/picture/hb.jpg" alt="我们的合作伙伴" >
+            </div>
+        </div>
+
+    </div>
+{/block}
+
