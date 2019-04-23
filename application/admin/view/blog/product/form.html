@@ -1,4 +1,4 @@
-{extend name="admin@public/basic" /}
+ {extend name="admin@public/basic" /}
 {block name="style"}
 <link rel="stylesheet" href="__STATIC__/css/admin/public.css" media="all"/>
 <link rel="stylesheet" type="text/css" href="__STATIC__/plugs/wangEditor-3.1.1/release/wangEditor.min.css"/>
@@ -30,10 +30,7 @@
         <div class="layui-input-block">
             <select id="category_id" lay-filter="category_id">
                 {foreach category_list as $vo}
-
-                    <option value="{$vo.id|default=''}" {if !empty($product.category_id) and $product.category_id eq $vo.id}selected{/if}>
-                        {$vo.title|default=''}
-                    </option>
+                <option value="{$vo.id|default=''}" {if !empty($product.category_id) and $product.category_id eq $vo.id}selected{/if}>{$vo.title|default=''}</option>
                 {/foreach}
             </select>
         </div>
@@ -64,11 +61,14 @@
             <textarea id="describe" placeholder="请输入产品描述" class="layui-textarea">{$product.describe|default=''}</textarea>
         </div>
     </div>
+
     <div class="layui-form-item layui-form-text">
         <label class="layui-form-label">产品内容</label>
         <div class="layui-input-block">
+
             <div id="editor1" class="toolbar">
             </div>
+
             <div id="editor2" class="edit-bg">
                 {$product.content|default=''|raw}
             </div>
@@ -105,16 +105,21 @@
          * 上传图片处理
          */
          //默认是单张图片上传
-        $.form.imageRender('upload_image_div');
+        $.form.imageRender('upload_image_div',4);
 
         /**
          *编辑器初始化
          */
         var E = window.wangEditor;
         var editor = new E('#editor1', '#editor2');
+
         editor.customConfig.uploadImgServer = "{:url('@admin/api.upload/image')}";
+
+        // editor.customConfig.uploadFileName = 'image';
         editor.customConfig.pasteFilterStyle = false;
-        editor.customConfig.uploadImgMaxLength = 5;
+        editor.customConfig.uploadImgMaxLength = 30;
+        editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;
+        
         editor.customConfig.uploadImgHooks = {
             timeout: function (xhr, editor) {
                 $.msg.error('上传超时！')
@@ -132,9 +137,11 @@
                 }
             }
         }
+
         editor.customConfig.customAlert = function (info) {
             layer.msg(info);
         }
+
         editor.create();
 
         //预读取产品标签
@@ -161,6 +168,7 @@
                 describe: $('#describe').val(),
                 content: editor.txt.html(),
             };
+            
             $.request.post('{:url("$thisRequest")}', data, function (res) {
                 $.msg.success(res.msg, function () {
                     $.tool.reload('open');

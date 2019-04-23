@@ -29,6 +29,7 @@ class Product extends ModelService {
      * @var string
      */
     protected $table = 'blog_product';
+    protected $updateTime = 'update_at';
 
     /**
      * 关联会员表
@@ -56,9 +57,13 @@ class Product extends ModelService {
     public static function add($post) {
         self::startTrans();
         try {
+            $product = new Product();
             $insert = $post;
             unset($insert['tag_list']);
-            $product_id = self::insertGetId($insert);
+
+            $product->save($insert);
+            $product_id = $product->id;
+
             self::__buildAddTag($product_id, $post);
             self::commit();
         } catch (\Exception $e) {
@@ -78,9 +83,17 @@ class Product extends ModelService {
         $update_article = $update;
         unset($update_article['product_id']);
         unset($update_article['tag_list']);
-        self::where(['id' => $update['product_id']])->update($update_article);
+
+        $product = new Product();
+        $product->id = $update['product_id'];
+
+        // 加上isUpdate(true)更新数据
+        $product->isUpdate(true)->save($update_article);
+
         \app\admin\model\blog\ProductTag::where(['product_id' => $update['product_id']])->delete();
+
         self::__buildAddTag($update['product_id'], $update);
+
         return __success('产品修改成功！');
     }
 
@@ -90,7 +103,9 @@ class Product extends ModelService {
      */
     protected static function __buildAddTag($product_id, $insert) {
         if (isset($insert['tag_list']) && !empty($insert['tag_list']) && !empty($product_id)) {
+
             list($tag_list, $save_all) = [explode(',', $insert['tag_list']), []];
+            
             foreach ($tag_list as $vo) {
                 $tag_id = \app\admin\model\blog\ProTag::where(['tag_title' => $vo])->value('id');
                 if (empty($tag_id)) {
@@ -101,6 +116,7 @@ class Product extends ModelService {
                     'tag_id'     => $tag_id,
                 ];
             }
+
             \app\admin\model\blog\ProductTag::insertAll($save_all);
         }
     }
@@ -160,8 +176,8 @@ class Product extends ModelService {
         }
         $count = self::where($where)->count();//float类型
 
-        $data = self::where($where)->field('id,category_id,member_id,title,cover_img,describe,recommend,praise,clicks,sort,remark,status,is_open,create_at')
-            ->page($page, $limit)->order(['create_at' => 'desc'])->select()
+        $data = self::where($where)->field('id,create_at,category_id,member_id,title,cover_img,describe,recommend,praise,clicks,sort,remark,status,is_open,update_at')
+            ->page($page, $limit)->order(['update_at' => 'desc'])->select()
             ->each(function ($item, $key) {
                 $memberInfo = $item->memberInfo;
                 $categoryInfo = $item->categoryInfo;

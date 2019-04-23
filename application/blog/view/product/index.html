@@ -13,67 +13,23 @@
       <div class="fwbq-wrap">
           <div class="fwbq-product">
               <ul>
+                {volist name='product_list' id='vo'}
                 <li>
-                  <a href='{:url("@blog/product/detail")}?type=3'>
-                    <img src="__PUBLIC__/images/smallkjxt.jpg" alt="">
+                  <a href="{:url('@blog/product/detail',['id'=>$vo.id])}">
+                    <img src="{$vo.cover_img|default=''}" alt="">
                     <span></span>
                   </a>
                 </li>
-                <li>
-                  <a href="productxq.html?type=4">
-                    <img src="__PUBLIC__/images/smallycxt.jpg" alt="">
-                    <span></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="productxq.html?type=1">
-                    <img src="__PUBLIC__/images/smallxcxfw.jpg" alt="">
-                    <span></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="productxq.html?type=2">
-                    <img src="__PUBLIC__/images/smallseo.jpg" alt="">
-                    <span></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="productxq.html?type=5">
-                    <img src="__PUBLIC__/images/smallfxsc.jpg" alt="">
-                    <span></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="productxq.html?type=6">
-                    <img src="__PUBLIC__/images/smallcpewm.jpg" alt="">
-                    <span></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="productxq.html?type=7">
-                    <img src="__PUBLIC__/images/smallxcxsc.jpg" alt="">
-                    <span></span>
-                  </a>
-                </li>
-                <li>
-                  <a href="productxq.html?type=8">
-                    <img src="__PUBLIC__/images/smallapp.jpg" alt="">
-                    <span></span>
-                  </a>
-                </li>
+                {/volist}
               </ul>
           </div>
-          <div class="page">
+          <div class="page" id="demo2">
               <ul>
-                <li><a href="">上一页</a></li>
-                <li><a href="" class="cur">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
-                <li><a href="">5</a></li>
-                <li><a href="">下一页</a></li>
+                {$product_list->render()|raw}
               </ul>
           </div>
       </div>
     </div>
 {/block}
+
+

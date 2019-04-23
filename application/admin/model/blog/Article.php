@@ -29,6 +29,7 @@ class Article extends ModelService {
      * @var string
      */
     protected $table = 'blog_article';
+    protected $updateTime = 'update_at';
 
     /**
      * 关联会员表
@@ -56,9 +57,14 @@ class Article extends ModelService {
     public static function add($post) {
         self::startTrans();
         try {
+            $article = new Article();
             $insert = $post;
             unset($insert['tag_list']);
-            $article_id = self::insertGetId($insert);
+
+            // $article_id = self::insertGetId($insert);
+            $article->save($insert);
+            $article_id = $article->id;
+
             self::__buildAddTag($article_id, $post);
             self::commit();
         } catch (\Exception $e) {
@@ -78,7 +84,14 @@ class Article extends ModelService {
         $update_article = $update;
         unset($update_article['article_id']);
         unset($update_article['tag_list']);
-        self::where(['id' => $update['article_id']])->update($update_article);
+        
+        $article = new Article();
+        $article->id = $update['article_id'];
+         // 加上isUpdate(true)更新数据
+        $article->isUpdate(true)->save($update_article);
+
+        // self::where(['id' => $update['article_id']])->update($update_article);
+
         \app\admin\model\blog\ArticleTag::where(['article_id' => $update['article_id']])->delete();
         self::__buildAddTag($update['article_id'], $update);
         return __success('文章修改成功！');
@@ -161,7 +174,7 @@ class Article extends ModelService {
 
         $count = self::where($where)->count();
 
-        $data = self::where($where)->field('id,category_id,member_id,title,cover_img,describe,recommend,praise,clicks,sort,remark,status,is_open,create_at')
+        $data = self::where($where)->field('id,update_at,category_id,member_id,title,cover_img,describe,recommend,praise,clicks,sort,remark,status,is_open,create_at')
             ->page($page, $limit)->order(['create_at' => 'desc'])->select()
             ->each(function ($item, $key) {
                 $memberInfo = $item->memberInfo;

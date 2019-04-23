@@ -50,12 +50,12 @@ class Upload extends AdminController {
             }
         }
         //判断是否使用七牛云上传
-        $file_type = Db::name('SystemConfig')->where(['name' => 'FileType', 'group' => 'file'])->value('value');
-        if ($file_type == 2) {
-            foreach ($url as &$vo) {
-                $vo = QiniuService::upload($vo);
-            }
-        }
+        // $file_type = Db::name('SystemConfig')->where(['name' => 'FileType', 'group' => 'file'])->value('value');
+        // if ($file_type == 2) {
+        //     foreach ($url as &$vo) {
+        //         $vo = QiniuService::upload($vo);
+        //     }
+        // }
         return json(['code' => 0, 'msg' => '上传成功！', 'url' => $url]);
     }
 

@@ -35,8 +35,9 @@ class Product extends BlogController {
         
         $where['is_deleted']=0;
         $where['status']=0;
-        $limit = 9;
-        $basic_data = model('Product')->order('create_at', 'desc')->field(['category_id,id,title,cover_img,create_at'])->where($where)->paginate($limit,false,['query'=>request()->param()])->each(function($item,$key){
+        $limit = 3;
+        $total = db('blog_product')->count();
+        $basic_data = model('Product')->order('update_at', 'desc')->field(['category_id,id,title,cover_img,update_at'])->where($where)->paginate($limit,false,['query'=>request()->param()])->each(function($item,$key){
 
         	$cat_id = $item['category_id'];
         	$item['category_name'] = db('Procategory')->where(['id'=>$cat_id])->value('title');
@@ -53,15 +54,29 @@ class Product extends BlogController {
         	}
 
         });
-        $ifexit_page = $basic_data->render();
-        $this->assign('ifexit_page',$ifexit_page);
+
         $this->assign('product_list',$basic_data);
+        $this->assign('total',$total);
         return $this->fetch();
       
     }
 
     public function detail(){
-        return $this->fetch();
+
+        if (!$this->request->isPost()) {
+            $id = $this->request->param('id');
+            //获取文章信息
+            if (empty($id)) return msg_error('暂无产品信息，请稍后再试');
+
+            $detail = $this->model->where(['status' => 0, 'is_deleted' => 0, 'id' => $id])->find();
+            if (empty($detail)) return msg_error('暂无产品信息，请稍后再试');
+
+            //新增文章点击量
+            $this->model->where(['id' => $id])->setInc('clicks', 1);
+
+            $this->assign('detail',$detail);
+            return $this->fetch();
+        }
     }
 
    

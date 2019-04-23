@@ -29,6 +29,7 @@ class Casement extends ModelService {
      * @var string
      */
     protected $table = 'blog_case';
+    protected $updateTime = 'update_at';
 
     /**
      * 关联会员表
@@ -56,9 +57,14 @@ class Casement extends ModelService {
     public static function add($post) {
         self::startTrans();
         try {
+            $casement = new Casement();
             $insert = $post;
             unset($insert['tag_list']);
-            $case_id = self::insertGetId($insert);
+
+            // $case_id = self::insertGetId($insert);
+            $casement->save($insert);
+            $case_id = $casement->id;
+
             self::__buildAddTag($case_id, $post);
             self::commit();
         } catch (\Exception $e) {
@@ -78,7 +84,13 @@ class Casement extends ModelService {
         $update_article = $update;
         unset($update_article['case_id']);
         unset($update_article['tag_list']);
-        self::where(['id' => $update['case_id']])->update($update_article);
+
+        // self::where(['id' => $update['case_id']])->update($update_article);
+        $casement = new Casement();
+        $casement ->id = $update['case_id'];
+        // 加上isUpdate(true)更新数据。
+        $casement->isUpdate(true)->save($update_article);
+
         \app\admin\model\blog\CaseTag::where(['case_id' => $update['case_id']])->delete();
         self::__buildAddTag($update['case_id'], $update);
         return __success('案例修改成功！');
@@ -160,7 +172,7 @@ class Casement extends ModelService {
         }
         $count = self::where($where)->count();//float类型
 
-        $data = self::where($where)->field('id,category_id,member_id,title,cover_img,describe,recommend,praise,clicks,sort,remark,status,is_open,create_at')
+        $data = self::where($where)->field('id,update_at,category_id,member_id,title,cover_img,describe,recommend,praise,clicks,sort,remark,status,is_open,create_at')
             ->page($page, $limit)->order(['create_at' => 'desc'])->select()
             ->each(function ($item, $key) {
                 $memberInfo = $item->memberInfo;

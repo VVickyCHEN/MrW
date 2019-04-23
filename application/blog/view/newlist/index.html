@@ -7,62 +7,27 @@
       <div class="fwbq">
           <h2>新闻中心</h2>
           <div class="solution_a">
-            当前位置：<a href="index.html">首页&gt;</a><label>新闻中心</label>
+            当前位置：<a href="{:url('@blog/index')}">首页&gt;</a><label>新闻中心</label>
           </div>
       </div>
       <div class="fwbq-wrap">
         <div class="new">
             <div class="new_left">
-                <a href="{:url('@blog/newlist/new_last')}">
+
+                {volist name='article_list' id='vo'}
+                <a href="{:url('@blog/newlist/new_last',['id'=>$vo.id])}">
                     <div class="new_img">
-                        <img src="__PUBLIC__/images/smallkjxt.jpg" alt="">
+                        <img src="{$vo.cover_img|default=''}" alt="">
                     </div>
                     <div class="new_text">
-                        <h2>我就是一个新闻中心不信你自己看看</h2>
-                        <p>我只是信息详情的一部分文案，不信你也可以自己看看，来自广州得翼网络有限公司的手笔！谢谢大家的查看我只是信息详情的一部分文案，不信你也可以自己看看。</p>
-                        <time>2018-08-02 12:12:12</time><span><img src="__PUBLIC__/images/look.png" alt=""><label>1113</label></span>
+                        <h2>{$vo.title}</h2>
+                        <p>{$vo.describe}</p>
+                        <time>{$vo.update_at}</time><span><img src="__PUBLIC__/images/look.png" alt=""><label>{$vo.clicks}</label></span>
                     </div>
                 </a> 
-                <a href="{:url('@blog/newlist/new_last')}">
-                    <div class="new_img">
-                        <img src="__PUBLIC__/images/smallkjxt.jpg" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h2>我就是一个新闻中心不信你自己看看</h2>
-                        <p>我只是信息详情的一部分文案，不信你也可以自己看看，来自广州得翼网络有限公司的手笔！谢谢大家的查看我只是信息详情的一部分文案，不信你也可以自己看看。</p>
-                        <time>2018-08-02 12:12:12</time><span><img src="__PUBLIC__/images/look.png" alt=""><label>1113</label></span>
-                    </div>
-                </a> 
-                <a href="{:url('@blog/newlist/new_last')}">
-                    <div class="new_img">
-                        <img src="__PUBLIC__/images/smallkjxt.jpg" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h2>我就是一个新闻中心不信你自己看看</h2>
-                        <p>我只是信息详情的一部分文案，不信你也可以自己看看，来自广州得翼网络有限公司的手笔！谢谢大家的查看我只是信息详情的一部分文案，不信你也可以自己看看。</p>
-                        <time>2018-08-02 12:12:12</time><span><img src="__PUBLIC__/images/look.png" alt=""><label>1113</label></span>
-                    </div>
-                </a>
-                <a href="{:url('@blog/newlist/new_last')}">
-                    <div class="new_img">
-                        <img src="__PUBLIC__/images/smallkjxt.jpg" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h2>我就是一个新闻中心不信你自己看看</h2>
-                        <p>我只是信息详情的一部分文案，不信你也可以自己看看，来自广州得翼网络有限公司的手笔！谢谢大家的查看我只是信息详情的一部分文案，不信你也可以自己看看。</p>
-                        <time>2018-08-02 12:12:12</time><span><img src="__PUBLIC__/images/look.png" alt=""><label>1113</label></span>
-                    </div>
-                </a> 
-                <a href="{:url('@blog/newlist/new_last')}">
-                    <div class="new_img">
-                        <img src="__PUBLIC__/images/smallkjxt.jpg" alt="">
-                    </div>
-                    <div class="new_text">
-                        <h2>我就是一个新闻中心不信你自己看看</h2>
-                        <p>我只是信息详情的一部分文案，不信你也可以自己看看，来自广州得翼网络有限公司的手笔！谢谢大家的查看我只是信息详情的一部分文案，不信你也可以自己看看。</p>
-                        <time>2018-08-02 12:12:12</time><span><img src="__PUBLIC__/images/look.png" alt=""><label>1113</label></span>
-                    </div>
-                </a>    
+
+                {/volist}
+                
             </div>
             <div class="new_right"> 
                 <div class="new_list">
@@ -98,15 +63,9 @@
             </div>
         </div>
  
-          <div class="page">
+          <div class="page" id="demo2">
               <ul>
-                <li><a href="">上一页</a></li>
-                <li><a href="" class="cur">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
-                <li><a href="">5</a></li>
-                <li><a href="">下一页</a></li>
+                {$article_list->render()|raw}
               </ul>
           </div>
       </div>

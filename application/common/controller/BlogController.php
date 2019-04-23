@@ -67,7 +67,7 @@ class BlogController extends Controller {
      */
     public function __construct() {
         parent::__construct();
-        $this->is_qiniu && $this->iniQiniu();
+        // $this->is_qiniu && $this->iniQiniu();
         $this->BlogInfo = Cache::get('BlogInfo');
         $module_controller = app('request')->module() . '/' . app('request')->controller();
         //QQ快捷登录模块无需执行，执行将报错

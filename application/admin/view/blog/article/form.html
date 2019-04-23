@@ -30,7 +30,7 @@
         <div class="layui-input-block">
             <select id="category_id" lay-filter="category_id">
                 {foreach category_list as $vo}
-                <option value="{$vo.id|default=''}" {if !empty($article.category_id) and $article.category_id eq $vo.id}selected{/if}>{$vo.title|default=''}</option>
+                <option value="{$vo.id|default=''}" {if !empty($articl.category_id) and $articl.category_id eq $vo.id}selected{/if}>{$vo.title|default=''}</option>
                 {/foreach}
             </select>
         </div>
@@ -150,7 +150,6 @@
          * 添加文章
          */
         $("#submitBtn").click(function () {
-        
             var data = {
                 article_id: $('#id').val(),
                 title: $('#title').val(),

@@ -40,14 +40,12 @@ class ProCategory extends ModelService {
     public static function getCategoryList() {
         $order_category_list = [
             'sort'      => 'desc',
-            'create_at' => 'desc',
+            'create_at' => 'asc',
         ];
-
         $category_list = self::field('id, title, create_at')
             ->where(['status' => 0])
             ->order($order_category_list)
             ->select();
-            
         return $category_list;
     }
 

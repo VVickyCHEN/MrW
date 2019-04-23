@@ -12,32 +12,35 @@
                     </ul>
                     <ul>
                         <h5>公司产品</h5>
+
                         <li><a href="productxq.html?type=3" title="控价系统" atl="控价系统">控价系统</a></li>
+                        
                         <li><a href="productxq.html?type=4" title="云仓系统" atl="云仓系统">云仓系统</a></li>
                         <li><a href="productxq.html?type=5" title="分销商城" atl="分销商城">分销商城</a></li>
                         <li><a href="productxq.html?type=1" title="小程序防伪" atl="小程序防伪">小程序防伪</a></li>
                         <li><a href="productxq.html?type=7" title="小程序商城" atl="小程序商城">小程序商城</a></li>
                         <li><a href="productxq.html?type=2" title="SEO优化" atl="SEO优化">SEO优化</a></li>
                         <li><a href="productxq.html?type=6" title="产品二维码" atl="产品二维码">产品二维码</a></li>
-                        <li><a href="productxq.html?type=8" title="APP定制" atl="APP定制">APP定制</a></li>
+                        <li><a href="productxq.html?type=8" title="APP定制" atl="APP定制">APP定制</a>
+                        </li>
+
                     </ul>
                     <ul>
                         <h5>联系方式</h5>
-                        <li>QQ：180-5428-5450</li>
+                        <li>QQ：{$SysInfo.qq}</li>
                         <li>手机号：180-5428-5450</li>
                         <li>微信号：180-5428-5450</li>
-                        <li>公司全称：广州得翼网络有限公司</li>
-                        <li>公司地址：广州市白云区永泰商务中心B219</li>
+                        <li>公司名称：{$SysInfo.OursName}</li>
+                        <li>{$SysInfo.address}</li>
 
                     </ul>
                 </div>
                 <div class="service_col_right fr">
                     <div class="service_tel fl">
                         <h6>咨询热线</h6>
-                        <p>180-5428-5450</p>
+                        <p>{$SysInfo.Author2}</p>
                     </div>
                     <div class="service_qr fl">
-                    <!--     <div class="img"><img src="__PUBLIC__/picture/qr.jpg" alt="我的微信"></div> -->
                         <div class="img"><img src="__PUBLIC__/images/wechat.jpg" alt="我的微信"></div>
                         <p>我的微信</p>
                     </div>
@@ -45,7 +48,7 @@
             </div>
             <div class="copy_col clearfix">
                 <div class="copyright fl">
-                    <p>© 广州得翼网络有限公司&nbsp;&nbsp;版权所有 &nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" style="color:#fff">粤ICP备17015772号</a></p>
+                    <p>{$SysInfo.FooterName|default=''}&nbsp;&nbsp;版权所有 &nbsp;&nbsp;<a href="http://www.miitbeian.gov.cn" style="color:#fff">{$SysInfo.Beian|default=''}</a></p>
                 </div>
             </div>
         </div>
@@ -58,7 +61,7 @@
                     <span>免费电话</span>
                 </a>
                 <div class="a_con tel">
-                    <p>服务热线：180-5428-5450</p>
+                    <p>服务热线：{$SysInfo.Author2}</p>
                 </div>
             </li>
             <li>

@@ -4,11 +4,11 @@
 <img src="__PUBLIC__/images/cpzx.jpg" alt="微商云仓系统，微商管理系统，微商新零售商城！" width="100%">
 <div class="width1200 smallwidth xcxfw-wrap">
       <div class="xcxfw">
-          <h2 class="titletxt">小程序防伪系统</h2>
-          <p class="smalltxt">官方性/新技术</p>
+          <h2 class="titletxt">{$detail.title|default=''}</h2>
+          <p class="smalltxt">{$detail.describe}</p>
       </div>
       <div class="product-img-show">
-          
+          {$detail.content|default=''|raw}
       </div>
 </div>
 
@@ -31,77 +31,7 @@
               html+='<img src="__PUBLIC__/images/1/5.jpg" alt="小程序防伪" title="小程序防伪"/>', 
               $('.product-img-show').append(html);
               $('.titletxt').html('小程序防伪系统');
-              $('.smalltxt').html('官方性/新技术');
-      } else if(type==2){
-        var html ='';
-              html+='<img src="__PUBLIC__/images/2/1.jpg" alt="seo" title="seo"/>', 
-              html+='<img src="__PUBLIC__/images/2/2.jpg" alt="seo" title="seo"/>', 
-              html+='<img src="__PUBLIC__/images/2/3.jpg" alt="seo" title="seo"/>', 
-              html+='<img src="__PUBLIC__/images/2/4.jpg" alt="seo" title="seo"/>', 
-              $('.product-img-show').append(html);
-              $('.titletxt').html('SEO搜索引擎优化');
-              $('.smalltxt').html('运营/布局/优化');
-      } else if(type==3){
-          var html ='';
-              html+='<img src="__PUBLIC__/images/3/1.jpg" alt="微商控价系统" title="微商控价系统"/>', 
-              html+='<img src="__PUBLIC__/images/3/2.jpg" alt="微商控价系统" title="微商控价系统"/>', 
-              html+='<img src="__PUBLIC__/images/3/3.jpg" alt="微商控价系统" title="微商控价系统"/>', 
-              html+='<img src="__PUBLIC__/images/3/4.jpg" alt="微商控价系统" title="微商控价系统"/>', 
-              html+='<img src="__PUBLIC__/images/3/5.jpg" alt="微商控价系统" title="微商控价系统"/>', 
-              html+='<img src="__PUBLIC__/images/3/6.jpg" alt="微商控价系统" title="微商控价系统"/>', 
-              html+='<img src="__PUBLIC__/images/3/7.jpg" alt="微商控价系统" title="微商控价系统"/>', 
-              html+='<img src="__PUBLIC__/images/3/8.jpg" alt="微商控价系统" title="微商控价系统"/>', 
-              $('.product-img-show').append(html);
-              $('.titletxt').html('微商控价系统');
-              $('.smalltxt').html('防伪/授权/控价');
-      } else if(type==4){
-        var html ='';
-              html+='<img src="__PUBLIC__/images/4/1.jpg" alt="微商云仓系统" title="微商云仓系统"/>', 
-              html+='<img src="__PUBLIC__/images/4/2.jpg" alt="微商云仓系统" title="微商云仓系统"/>', 
-              html+='<img src="__PUBLIC__/images/4/3.jpg" alt="微商云仓系统" title="微商云仓系统"/>', 
-              html+='<img src="__PUBLIC__/images/4/4.jpg" alt="微商云仓系统" title="微商云仓系统"/>', 
-              html+='<img src="__PUBLIC__/images/4/5.jpg" alt="微商云仓系统" title="微商云仓系统"/>', 
-              $('.product-img-show').append(html);
-              $('.titletxt').html('微商云仓系统');
-              $('.smalltxt').html('入仓/云仓/提货');
-      } else if(type==5){
-          var html ='';
-              html+='<img src="__PUBLIC__/images/5/1.jpg" alt="分销商城系统" title="分销商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/5/2.jpg" alt="分销商城系统" title="分销商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/5/3.jpg" alt="分销商城系统" title="分销商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/5/4.jpg" alt="分销商城系统" title="分销商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/5/5.jpg" alt="分销商城系统" title="分销商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/5/6.jpg" alt="分销商城系统" title="分销商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/5/7.jpg" alt="分销商城系统" title="分销商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/5/8.jpg" alt="分销商城系统" title="分销商城系统"/>', 
-              $('.product-img-show').append(html);
-              $('.titletxt').html('分销商城系统');
-              $('.smalltxt').html('分销/下单/会员');
-      } else if(type==6){
-          var html ='';
-              html+='<img src="__PUBLIC__/images/6/1.jpg" alt="产品二维码系统" title="产品二维码系统"/>', 
-              html+='<img src="__PUBLIC__/images/6/2.jpg" alt="产品二维码系统" title="产品二维码系统"/>', 
-              html+='<img src="__PUBLIC__/images/6/3.jpg" alt="产品二维码系统" title="产品二维码系统"/>', 
-              html+='<img src="__PUBLIC__/images/6/4.jpg" alt="产品二维码系统" title="产品二维码系统"/>', 
-              html+='<img src="__PUBLIC__/images/6/5.jpg" alt="产品二维码系统" title="产品二维码系统"/>', 
-              html+='<img src="__PUBLIC__/images/6/6.jpg" alt="产品二维码系统" title="产品二维码系统"/>', 
-              $('.product-img-show').append(html);
-              $('.titletxt').html('产品二维码系统');
-              $('.smalltxt').html('分销/下单/会员');
-      } else if(type==7){
-          var html ='';
-              html+='<img src="__PUBLIC__/images/7/1.jpg" alt="小程序商城系统" title="小程序商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/7/2.jpg" alt="小程序商城系统" title="小程序商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/7/3.jpg" alt="小程序商城系统" title="小程序商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/7/4.jpg" alt="小程序商城系统" title="小程序商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/7/5.jpg" alt="小程序商城系统" title="小程序商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/7/6.jpg" alt="小程序商城系统" title="小程序商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/7/7.jpg" alt="小程序商城系统" title="小程序商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/7/8.jpg" alt="小程序商城系统" title="小程序商城系统"/>', 
-              html+='<img src="__PUBLIC__/images/7/9.jpg" alt="小程序商城系统" title="小程序商城系统"/>', 
-              $('.product-img-show').append(html);
-              $('.titletxt').html('小程序商城系统');
-              $('.smalltxt').html('分销/下单/会员');
+              $('.smalltxt').html('官方性/新技术'); 
       }else{
           var html ='';
               html+='<img src="__PUBLIC__/images/8/1.jpg" alt="APP定制开发" title="APP定制开发"/>', 

@@ -3390,6 +3390,10 @@ body{padding-top: 125px;}
 	background:#2d94ce;
 	color: #fff;
 }
+.page ul li.active{
+	background:#2d94ce;
+	color: #fff;
+}
 .page ul li:last-child a{
 	color: #2d94ce;
 }
