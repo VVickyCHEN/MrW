@@ -111,7 +111,6 @@
         var editor = new E('#editor1', '#editor2');
         editor.customConfig.uploadImgServer = "{:url('@admin/api.upload/image')}";
         editor.customConfig.pasteFilterStyle = false;
-        editor.customConfig.uploadImgMaxLength = 5;
         editor.customConfig.uploadImgHooks = {
             timeout: function (xhr, editor) {
                 $.msg.error('上传超时！')
@@ -149,10 +148,7 @@
          * 添加案例
          */
         $("#submitBtn").click(function () {
-            if (editor.txt.text() == '') {
-                $.msg.error('案例内容不可为空！');
-                return false;
-            }
+          
             var data = {
                 case_id: $('#id').val(),
                 title: $('#title').val(),

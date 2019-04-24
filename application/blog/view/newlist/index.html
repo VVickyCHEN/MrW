@@ -30,26 +30,30 @@
                 
             </div>
             <div class="new_right"> 
+
+                {volist name="cate_list" id="vo"}
                 <div class="new_list">
-                    <h2>热门新闻</h2>
+                    <h2>{$vo.title}</h2>
                     <ul>
-                        <li><a href=""><label>1</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
-                        <li><a href=""><label>2</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
-                        <li><a href=""><label>3</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
-                        <li><a href=""><label>4</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
-                        <li><a href=""><label>5</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
+
+                        {empty name="vo.new_list"}
+          
+                        {else /}
+
+                            {volist name="vo.new_list" id="v" key="k"}
+                                <li>
+                                    <a href="{:url('@blog/newlist/new_last',['id'=>$v.id])}">
+                                        <label>{$k}</label>{$v.title}
+                                    </a>
+                                </li>
+                            {/volist}  
+
+                        {/empty}
+                        
                     </ul>
                 </div>
-                <div class="new_list">
-                    <h2>控价新闻</h2>
-                    <ul>
-                        <li><a href=""><label>1</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
-                        <li><a href=""><label>2</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
-                        <li><a href=""><label>3</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
-                        <li><a href=""><label>4</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
-                        <li><a href=""><label>5</label>我是人们新闻我是人们新闻我是人们新闻我是人们新闻</a></li>
-                    </ul>
-                </div>
+                {/volist}
+
                  <div class="new_list">
                     <h2>联系我们</h2>
                     <ul>
@@ -63,11 +67,12 @@
             </div>
         </div>
  
-          <div class="page" id="demo2">
-              <ul>
-                {$article_list->render()|raw}
-              </ul>
-          </div>
+        <div class="page" id="demo2">
+          <ul>
+            {$article_list->render()|raw}
+          </ul>
+        </div>
+        
       </div>
     </div>
 {/block}

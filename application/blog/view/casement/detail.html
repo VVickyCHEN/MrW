@@ -1,0 +1,24 @@
+{extend name="blog@public/basic" /}
+{block name="cotent"}
+<img src="__PUBLIC__/images/case.jpg" alt="微商云仓系统，微商管理系统，微商新零售商城！" width="100%">
+<div class="width1200 smallwidth xcxfw-wrap">
+		<div class="case">
+	        <ul>
+	            {volist name="cate_list" id="vo"}
+
+	              <li><a href="{:url('@blog/casement/index',['casecategory'=>$vo.id])}">{$vo.title}</a></li>
+
+	            {/volist}
+
+	        </ul>
+      	</div>
+      	<div class="xcxfw">
+          <h2 class="titletxt">{$detail.title|default=''}</h2>
+          <p class="smalltxt">{$detail.describe}</p>
+      	</div>
+      	<div class="product-img-show">
+          {$detail.content|default=''|raw}
+      	</div>
+</div>
+
+{/block}

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50553
 File Encoding         : 65001
 
-Date: 2019-04-22 18:06:17
+Date: 2019-04-24 17:25:24
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -42,20 +42,15 @@ CREATE TABLE `blog_article` (
   PRIMARY KEY (`id`),
   KEY `index_blog_article_sort` (`sort`) USING BTREE,
   KEY `index_blog_article_title` (`title`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客文章表';
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客文章表';
 
 -- ----------------------------
 -- Records of blog_article
 -- ----------------------------
-INSERT INTO `blog_article` VALUES ('4', '6', '0', ' mysql性能的检查和优化方法', '/static/temp/blog/art.jpg', '不论搭建什么样的网站，选择一个好的域名都是很有必要的，选择一个好的域名对网站的意义也是不言而喻的。每一个网站都有之对应的域名，就像人的名字一样。每个人都想自己有个好听的名字，网站也是一样。一个网站可以有多个域名，但是一个域名只能对应', '不论搭建什么样的网站，选择一个好的域名都是很有必要的，选择一个好的域名对网站的意义也是不言而喻的。每一个网站都有之对应的域名，就像人的名字一样。每个人都想自己有个好听的名字，网站也是一样。一个网站可以有多个域名，但是一个域名只能对应', '19', '0', '0', '0', null, '0', '1', '0', '2018-08-10 16:59:53', '0', null, null);
-INSERT INTO `blog_article` VALUES ('5', '7', '0', '个人博客应该选择什么样的域名和域名后缀', '/static/temp/blog/art.jpg', '不论搭建什么样的网站，选择一个好的域名都是很有必要的，选择一个好的域名对网站的意义也是不言而喻的。每一个网站都有之对应的域名，就像人的名字一样。每个人都想自己有个好听的名字，网站也是一样。一个网站可以有多个域名，但是一个域名只能对应', '<p><br></p>', '0', '0', '70', '26', null, '0', '1', '0', '2018-08-10 16:59:53', '0', null, null);
-INSERT INTO `blog_article` VALUES ('6', '6', '0', '暗室逢灯', '/static/uploads/20190314/861e4cb56e4812c488cc6789e0982259.jpg', '阿斯蒂芬', '<p>阿斯蒂芬</p>', '0', '0', '1', '0', null, '0', '1', '0', '2019-03-14 14:07:30', '0', null, null);
-INSERT INTO `blog_article` VALUES ('7', '6', '0', '阿斯蒂芬', '/static/uploads/20190314/d8fd82ba153442980b9e4065fefc5c5f.jpg', '阿斯蒂芬', '<p>阿斯蒂芬</p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-03-14 15:49:39', '0', null, null);
-INSERT INTO `blog_article` VALUES ('8', '6', '0', 'ROOMATE智能扫地机器人详情页', '/static/uploads/20190418/da55bf65ff9d96d29f597b77edbaf08e.jpg', '产品', '<p>产品</p>', '0', '0', '4', '0', null, '0', '1', '0', '2019-03-14 15:49:55', '0', null, null);
-INSERT INTO `blog_article` VALUES ('9', '0', '0', 'sadf', 'asdf', 'asdf', 'asdf', '0', '0', '0', '0', null, '0', '1', '1', '2019-03-14 15:51:11', '0', null, null);
-INSERT INTO `blog_article` VALUES ('10', '0', '0', 'sdafv', 'asdf', 'asdf', 'asdf', '0', '0', '1', '0', null, '0', '1', '1', '2019-03-14 15:51:19', '0', null, null);
-INSERT INTO `blog_article` VALUES ('11', '0', '0', 'asdf', 'asdf', 'asdf', 'asdf', '0', '0', '2', '0', null, '0', '1', '1', '2019-03-14 15:51:28', '0', null, null);
-INSERT INTO `blog_article` VALUES ('12', '0', '0', 'saf', 'sadf', 'asdf', 'asdf', '0', '0', '2', '0', null, '0', '1', '1', '2019-03-14 15:51:46', '0', null, null);
+INSERT INTO `blog_article` VALUES ('4', '6', '0', '云仓系统开发', '/static/uploads/20190423/569dddb9ef8b8d0d32889fc333b95560.jpg', '云仓系统开发', '<p><img src=\"/static/uploads/20190423/6749c8c17814d73b9ba4ba1c49fba8d1.jpg\" style=\"max-width:100%;\"><br></p><p><br></p>', '19', '0', '8', '0', null, '0', '1', '0', '2018-08-10 16:59:53', '0', '2019-04-23 17:52:54', null);
+INSERT INTO `blog_article` VALUES ('6', '6', '0', '小程序商城', '/static/uploads/20190423/432f9c5d988dc8a311636fda6cea8e1d.jpg', '小程序商城', '<p><img src=\"/static/uploads/20190423/72515b47615238b33257080ca96cbce4.jpg\" style=\"max-width:100%;\"><br></p>', '0', '0', '2', '0', null, '0', '1', '0', '2019-03-14 14:07:30', '0', '2019-04-23 17:49:01', null);
+INSERT INTO `blog_article` VALUES ('7', '6', '0', '产品二维码', '/static/uploads/20190423/5d000d00446a8b51c416140e095f7f66.jpg', '产品二维码', '<p><img src=\"/static/uploads/20190423/cfde325dc174f2308c68ec4bf50f0119.jpg\" style=\"max-width:100%;\"><br></p>', '0', '0', '9', '0', null, '0', '1', '0', '2019-03-14 15:49:39', '0', '2019-04-23 17:48:12', null);
+INSERT INTO `blog_article` VALUES ('8', '6', '0', '微商控价系统', '/static/uploads/20190423/66961ee21b487c359ed2f426935864fd.jpg', '微商控价系统', '<p><img src=\"/static/uploads/20190423/15b4485ab25ed9c369b96c60556b69d9.jpg\" style=\"max-width:100%;\"><br></p><p><br></p>', '0', '0', '5', '0', null, '0', '1', '0', '2019-03-14 15:49:55', '0', '2019-04-23 17:53:09', null);
 
 -- ----------------------------
 -- Table structure for blog_article_tag
@@ -68,20 +63,21 @@ CREATE TABLE `blog_article_tag` (
   PRIMARY KEY (`id`),
   KEY `index_blog_article_tag_article_id` (`article_id`) USING BTREE,
   KEY `index_blog_article_tag_tag_id` (`tag_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='文章标签关联表';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='文章标签关联表';
 
 -- ----------------------------
 -- Records of blog_article_tag
 -- ----------------------------
-INSERT INTO `blog_article_tag` VALUES ('1', '6', '17');
-INSERT INTO `blog_article_tag` VALUES ('2', '7', '17');
 INSERT INTO `blog_article_tag` VALUES ('4', '13', '18');
 INSERT INTO `blog_article_tag` VALUES ('5', '14', '19');
 INSERT INTO `blog_article_tag` VALUES ('6', '15', '20');
-INSERT INTO `blog_article_tag` VALUES ('7', '8', '21');
-INSERT INTO `blog_article_tag` VALUES ('8', '8', '22');
-INSERT INTO `blog_article_tag` VALUES ('9', '8', '23');
 INSERT INTO `blog_article_tag` VALUES ('10', '5', '24');
+INSERT INTO `blog_article_tag` VALUES ('14', '7', '17');
+INSERT INTO `blog_article_tag` VALUES ('15', '6', '17');
+INSERT INTO `blog_article_tag` VALUES ('17', '4', '25');
+INSERT INTO `blog_article_tag` VALUES ('18', '8', '21');
+INSERT INTO `blog_article_tag` VALUES ('19', '8', '22');
+INSERT INTO `blog_article_tag` VALUES ('20', '8', '23');
 
 -- ----------------------------
 -- Table structure for blog_case
@@ -116,13 +112,13 @@ CREATE TABLE `blog_case` (
 -- Records of blog_case
 -- ----------------------------
 INSERT INTO `blog_case` VALUES ('28', '0', '9', '爱斯贝儿品牌', '/static/uploads/20190419/19ca771f51db3d41f1ce577fcd86eb07.jpg', '云仓', '<p>云仓</p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 11:33:11', '0', null, null);
-INSERT INTO `blog_case` VALUES ('29', '0', '9', 'cicilove微商控价系统', '/static/uploads/20190419/ec9d8887b72aaaf7dd92adeec1e5bc25.jpg', '控价', '<p>控价</p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:15:30', '0', null, null);
-INSERT INTO `blog_case` VALUES ('30', '0', '9', '凡玊云仓定制开发', '/static/uploads/20190419/c57b963962220708ea819b7ddb9baf15.jpg', '云仓虚拟币授权代理管理', '<p>云仓虚拟币授权代理管理</p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:16:28', '0', null, null);
+INSERT INTO `blog_case` VALUES ('29', '0', '10', 'cicilove微商控价系统', '/static/uploads/20190419/ec9d8887b72aaaf7dd92adeec1e5bc25.jpg', '控价', '<p><img src=\"/static/uploads/20190424/3d541dbc90bfe5bd1ccfa1132d2272ce.jpg\" style=\"max-width:100%;\"><br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:15:30', '0', '2019-04-24 11:37:49', null);
+INSERT INTO `blog_case` VALUES ('30', '0', '11', '凡玊云仓定制开发', '/static/uploads/20190419/c57b963962220708ea819b7ddb9baf15.jpg', '授权、云仓', '<p><img src=\"/static/uploads/20190424/9ae73d487d817ee080b39b58df8d495f.jpg\" style=\"max-width:100%;\"><br></p><p><br></p>', '0', '0', '3', '0', null, '0', '1', '0', '2019-04-19 14:16:28', '0', '2019-04-24 11:37:31', null);
 INSERT INTO `blog_case` VALUES ('31', '0', '12', 'PMA微商控价系统', '/static/uploads/20190419/e48e40dd834be28b80dc34c35124fd41.jpg', '控价授权防伪', '<p>控价授权防伪</p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:17:06', '0', null, null);
-INSERT INTO `blog_case` VALUES ('32', '0', '9', '喵本国际云仓定制开发', '/static/uploads/20190419/5e9c5d62cccfeca85afeaa8125302c82.jpg', '喵本国际云仓定制开发', '<p><span style=\"color: rgb(34, 34, 34); font-family: Consolas, \'Lucida Console\', monospace; font-size: 12px; line-height: normal; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">喵本国际云仓定制开发</span>&nbsp;&nbsp;<br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:18:01', '0', null, null);
-INSERT INTO `blog_case` VALUES ('33', '0', '9', '三生雪云仓定制开发', '/static/uploads/20190419/e297b53c206cfdae305649b5cd1e36ea.jpg', '三生雪云仓定制开发', '<p><span style=\"color: rgb(34, 34, 34); font-family: Consolas, \'Lucida Console\', monospace; font-size: 12px; line-height: normal; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">三生雪云仓定制开发</span>&nbsp;&nbsp;<br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:18:35', '0', null, null);
-INSERT INTO `blog_case` VALUES ('34', '0', '9', 'les pela微商控价系统', '/static/uploads/20190419/b00a3939c97216e619760acdaa347805.jpg', 'les pela微商控价系统', '<p><span style=\"color: rgb(34, 34, 34); font-family: Consolas, \'Lucida Console\', monospace; font-size: 12px; line-height: normal; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">les pela微商控价系统</span>&nbsp;&nbsp;<br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:19:18', '0', null, null);
-INSERT INTO `blog_case` VALUES ('35', '0', '9', '婍人儿微商控价系统', '/static/uploads/20190419/76bf50fbabb9c3a24d9c2cc337ea93cf.jpg', '婍人儿微商控价系统', '<p><span style=\"color: rgb(34, 34, 34); font-family: Consolas, \'Lucida Console\', monospace; font-size: 12px; line-height: normal; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">婍人儿微商控价系统</span>&nbsp;&nbsp;<br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:20:05', '0', null, null);
+INSERT INTO `blog_case` VALUES ('32', '0', '13', '喵本国际云仓定制开发', '/static/uploads/20190419/5e9c5d62cccfeca85afeaa8125302c82.jpg', '授权', '<p><img src=\"/static/uploads/20190424/8fab572a43e8508c598c421a8e42d3fe.jpg\" style=\"max-width:100%;\"><br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:18:01', '0', '2019-04-24 11:36:49', null);
+INSERT INTO `blog_case` VALUES ('33', '0', '14', '三生雪云仓定制开发', '/static/uploads/20190419/e297b53c206cfdae305649b5cd1e36ea.jpg', '三生雪云仓定制开发', '<p><span style=\"color: rgb(34, 34, 34); font-family: Consolas, \'Lucida Console\', monospace; font-size: 12px; line-height: normal; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">三生雪云仓定制开发</span>&nbsp;&nbsp;<br></p><p><br></p>', '0', '0', '1', '0', null, '0', '1', '0', '2019-04-19 14:18:35', '0', '2019-04-24 11:33:58', null);
+INSERT INTO `blog_case` VALUES ('34', '0', '17', '微商云仓系统', '/static/uploads/20190424/a3d608b82cab22faee98c1e0527ff07f.jpg', '入仓/云仓/提货', '<p><img src=\"/static/uploads/20190424/853e2e409a0aae6c88be2af0cbec0d73.jpg\" style=\"max-width:100%;\"><img src=\"/static/uploads/20190424/719ef27c2a09f925940335102baabb86.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190424/5dc83572add2e2735d6674919bb2e484.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190424/8f2781a322d014fb8ad4e4b64e81e432.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190424/a240ee8a5c88e89cc7e473949f99a327.jpg\" style=\"line-height: normal; max-width: 100%;\"><br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:19:18', '0', '2019-04-24 11:35:45', null);
+INSERT INTO `blog_case` VALUES ('35', '0', '17', '微商控价系统', '/static/uploads/20190424/eb785396fb3530361f27598e632e475c.jpg', '防伪/授权/控价', '<p><img src=\"http://www.mrw.com/static/uploads/20190424/4d498ca214c6a9967c2c3c35f32572b0.jpg\" style=\"max-width: 100%;\"><img src=\"http://www.mrw.com/static/uploads/20190424/8f9bd9714e35a180f6ce5a0cf1a3a60d.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"http://www.mrw.com/static/uploads/20190424/a488b661ee1697196c214ede02571fd3.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"http://www.mrw.com/static/uploads/20190424/836b742349508fd3b2dc332979155744.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"http://www.mrw.com/static/uploads/20190424/33e7120d27ea6dcee99f4ce199f2061a.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"http://www.mrw.com/static/uploads/20190424/1d0dc1b244207d5b126f92aefadceb57.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"http://www.mrw.com/static/uploads/20190424/e6c96e1c4bd8adfee8f1fc4a2e8e0857.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"http://www.mrw.com/static/uploads/20190424/bbb717806945b390426eeeef3b64466d.jpg\" style=\"box-shadow: rgb(51, 51, 51) 0px 0px 5px; line-height: normal; max-width: 100%;\">&nbsp;&nbsp;<br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-19 14:20:05', '0', '2019-04-24 11:35:31', null);
 
 -- ----------------------------
 -- Table structure for blog_case_tag
@@ -135,33 +131,19 @@ CREATE TABLE `blog_case_tag` (
   PRIMARY KEY (`id`),
   KEY `index_blog_case_tag_article_id` (`case_id`) USING BTREE,
   KEY `index_blog_case_tag_tag_id` (`tag_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='案例标签关联表';
+) ENGINE=InnoDB AUTO_INCREMENT=77 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='案例标签关联表';
 
 -- ----------------------------
 -- Records of blog_case_tag
 -- ----------------------------
 INSERT INTO `blog_case_tag` VALUES ('43', '31', '38');
 INSERT INTO `blog_case_tag` VALUES ('47', '28', '34');
-INSERT INTO `blog_case_tag` VALUES ('48', '35', '36');
-INSERT INTO `blog_case_tag` VALUES ('49', '35', '35');
-INSERT INTO `blog_case_tag` VALUES ('50', '35', '38');
-INSERT INTO `blog_case_tag` VALUES ('51', '34', '38');
-INSERT INTO `blog_case_tag` VALUES ('52', '34', '36');
-INSERT INTO `blog_case_tag` VALUES ('53', '34', '35');
-INSERT INTO `blog_case_tag` VALUES ('54', '33', '37');
-INSERT INTO `blog_case_tag` VALUES ('55', '33', '33');
-INSERT INTO `blog_case_tag` VALUES ('56', '33', '34');
-INSERT INTO `blog_case_tag` VALUES ('57', '33', '36');
-INSERT INTO `blog_case_tag` VALUES ('58', '32', '37');
-INSERT INTO `blog_case_tag` VALUES ('59', '32', '33');
-INSERT INTO `blog_case_tag` VALUES ('60', '32', '34');
-INSERT INTO `blog_case_tag` VALUES ('61', '32', '36');
-INSERT INTO `blog_case_tag` VALUES ('62', '30', '37');
-INSERT INTO `blog_case_tag` VALUES ('63', '30', '33');
-INSERT INTO `blog_case_tag` VALUES ('64', '30', '34');
-INSERT INTO `blog_case_tag` VALUES ('65', '30', '36');
-INSERT INTO `blog_case_tag` VALUES ('66', '29', '36');
-INSERT INTO `blog_case_tag` VALUES ('67', '29', '35');
+INSERT INTO `blog_case_tag` VALUES ('70', '33', '36');
+INSERT INTO `blog_case_tag` VALUES ('71', '35', '39');
+INSERT INTO `blog_case_tag` VALUES ('72', '34', '40');
+INSERT INTO `blog_case_tag` VALUES ('73', '32', '36');
+INSERT INTO `blog_case_tag` VALUES ('75', '30', '36');
+INSERT INTO `blog_case_tag` VALUES ('76', '29', '35');
 
 -- ----------------------------
 -- Table structure for blog_category
@@ -185,8 +167,8 @@ CREATE TABLE `blog_category` (
 -- ----------------------------
 -- Records of blog_category
 -- ----------------------------
-INSERT INTO `blog_category` VALUES ('6', '平面类', null, '', '0', '0', '2018-08-11 01:43:09', '0', null, null);
-INSERT INTO `blog_category` VALUES ('7', '123', null, '', '0', '0', '2019-04-22 16:46:44', '0', null, null);
+INSERT INTO `blog_category` VALUES ('6', '公司新闻', null, '', '0', '0', '2018-08-11 01:43:09', '0', '2019-04-24 10:38:06', null);
+INSERT INTO `blog_category` VALUES ('7', '企业新闻', null, '', '0', '0', '2019-04-22 16:46:44', '0', '2019-04-24 10:38:03', null);
 
 -- ----------------------------
 -- Table structure for blog_comment
@@ -231,20 +213,18 @@ CREATE TABLE `blog_config` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `name` (`name`),
   KEY `group` (`group`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客配置';
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客配置';
 
 -- ----------------------------
 -- Records of blog_config
 -- ----------------------------
 INSERT INTO `blog_config` VALUES ('1', 'LoginDuration', 'blog', 'time', '3600', '博客登录有效时长', '0', '2018-07-17 17:27:27', '0', '2018-07-17 22:10:33', null);
-INSERT INTO `blog_config` VALUES ('36', 'ScanFollow', 'blog', 'string', '/static/uploads/20190417/a5443e8b7066c9a4541173d3814df9d7.jpg', '扫我关注', '0', '2018-08-29 12:58:10', '0', null, null);
-INSERT INTO `blog_config` VALUES ('37', 'SiteName', 'blog', 'string', '广州得翼有限公司', '站点名称', '0', '2019-01-02 17:11:57', '0', null, null);
-INSERT INTO `blog_config` VALUES ('38', 'SiteKeywords', 'blog', 'string', '广州得翼有限公司', '站点关键词', '0', '2019-01-02 17:13:09', '0', null, null);
-INSERT INTO `blog_config` VALUES ('39', 'SiteDescription', 'blog', 'string', '广州得翼有限公司', '站点描述', '0', '2019-01-02 17:13:25', '0', null, null);
-INSERT INTO `blog_config` VALUES ('40', 'SiteUsername', 'blog', 'string', '广州得翼有限公司', '站长姓名', '0', '2019-01-02 17:38:39', '0', null, null);
-INSERT INTO `blog_config` VALUES ('41', 'SiteJob', 'blog', 'string', '广州得翼有限公司', '站长职业', '0', '2019-01-02 17:38:49', '0', null, null);
-INSERT INTO `blog_config` VALUES ('42', 'SiteEmail', 'blog', 'string', '广州得翼有限公司', '站长邮箱', '0', '2019-01-02 17:39:00', '0', null, null);
-INSERT INTO `blog_config` VALUES ('43', 'SiteLocation', 'blog', 'string', '广州', '工作地址', '0', '2019-01-02 17:39:20', '0', null, null);
+INSERT INTO `blog_config` VALUES ('36', 'ScanFollow', 'blog', 'string', '/static/uploads/20190424/0280708b824debd59400a2f23784ff14.jpg', '扫我关注', '0', '2018-08-29 12:58:10', '0', null, null);
+INSERT INTO `blog_config` VALUES ('40', 'qq', 'blog', 'string', '180-5428-5450', 'QQ', '0', '2019-01-02 17:38:39', '0', null, null);
+INSERT INTO `blog_config` VALUES ('41', 'phone', 'blog', 'string', '180-5428-5450', '手机号码', '0', '2019-01-02 17:38:49', '0', null, null);
+INSERT INTO `blog_config` VALUES ('42', 'wechat', 'blog', 'string', '180-5428-5450', '微信', '0', '2019-01-02 17:39:00', '0', null, null);
+INSERT INTO `blog_config` VALUES ('43', 'SiteLocation', 'blog', 'string', '广东省广州市白云区永泰商务中心B219', '工作地址', '0', '2019-01-02 17:39:20', '0', null, null);
+INSERT INTO `blog_config` VALUES ('44', 'company_name', 'blog', 'string', '广东得翼网络科技有限公司', '公司名称', '0', '2019-04-24 16:34:49', '0', null, null);
 
 -- ----------------------------
 -- Table structure for blog_follow
@@ -423,14 +403,19 @@ CREATE TABLE `blog_product` (
   PRIMARY KEY (`id`),
   KEY `index_blog_product_title` (`title`) USING BTREE,
   KEY `index_blog_product_sort` (`sort`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客产品表';
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客产品表';
 
 -- ----------------------------
 -- Records of blog_product
 -- ----------------------------
-INSERT INTO `blog_product` VALUES ('13', '0', '8', '微商控价系统', '/static/uploads/20190418/8d219ffa5a647aa7bbf0e3e8fcf50f33.jpg', 'ROOMATE智能扫地机器人详情页', '<p>1213</p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-03-27 11:32:24', '0', null, null);
-INSERT INTO `blog_product` VALUES ('15', '0', '8', 'ROOMATE智能扫地机器人详情页', '/static/uploads/20190418/b497b8ec1014fba56b30cce06cb1f00e.jpg', '平面类', '<p><span style=\"color: rgb(85, 85, 85); font-size: 15.4px; line-height: normal;\">平面类</span><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-03-27 11:45:17', '0', null, null);
-INSERT INTO `blog_product` VALUES ('26', '0', '12', 'ROOMATE智能扫地机器人详情页', '/static/uploads/20190418/b7306927e7a9c788f3e39ae16e2d140e.jpg', '产品修改', '<p>产品修</p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-03-27 14:09:27', '0', null, null);
+INSERT INTO `blog_product` VALUES ('13', '0', '8', '得翼微商控价系统', '/static/uploads/20190423/69eb484f4c705fb4e87b81c46d8e799b.jpg', '微商控价系统', '<p><img src=\"/static/uploads/20190423/1c136323fb11099f081784866885d25e.jpg\" style=\"max-width:100%;\"><img src=\"/static/uploads/20190423/4fc0adb506b01eb3523cf1711a90bf28.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/16e3b2dd9a69f3604f13c6ea8f7078ef.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/713f89070fb3959df4114e0bec76053d.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/6b706397e70c63fa5bce9160a2adaef1.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/f7e61061b0a6f82e65e7ff78e61b192d.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/abaa35c1e25e650666e03da1e354dd57.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/f92a0ce618e16f4a9d1b3b7b8af8e4d7.jpg\" style=\"line-height: normal; max-width: 100%;\"><br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-03-27 11:32:24', '0', '2019-04-23 15:56:05', null);
+INSERT INTO `blog_product` VALUES ('15', '0', '8', '小程序防伪开发', '/static/uploads/20190423/1a59c871c3596aeb198209bbe80c9a3a.jpg', '小程序防伪开发', '<p><img src=\"/static/uploads/20190423/31abd1700fe39e0f825e01fefe28a5ad.jpg\" style=\"max-width:100%;\"><img src=\"/static/uploads/20190423/8b6e585e9e2e2a67f50eb520521982e9.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/712a928f4c4ef814fb79622710bcf588.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/04eb02ebff50a44b838030711cb319d3.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/8ebbbef5af48b7b55d4333a5b0da529b.jpg\" style=\"line-height: normal; max-width: 100%;\"><br></p><p><br></p>', '0', '0', '1', '0', null, '0', '1', '0', '2019-03-27 11:45:17', '0', '2019-04-23 15:56:40', null);
+INSERT INTO `blog_product` VALUES ('26', '0', '11', 'SEO优化', '/static/uploads/20190423/bc634ea6ce4ce7a88e44307f97b0469c.jpg', 'SEO优化', '<p><img src=\"/static/uploads/20190423/a40a327146a45f4121510905a40cd9ec.jpg\" style=\"max-width:100%;\"><img src=\"/static/uploads/20190423/b3c7165053bf44af92d6277f9c2e4e7b.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/a4c5cba051bcde3bab4f99766a47cd33.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/f6deabb1532e9247cb29fa171e8f6d82.jpg\" style=\"line-height: normal; max-width: 100%;\"><br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-03-27 14:09:27', '0', '2019-04-23 15:57:08', null);
+INSERT INTO `blog_product` VALUES ('27', '0', '9', '云仓系统开发', '/static/uploads/20190423/8f8ec9d862dc68225dcae6c32c9def3b.jpg', '云仓系统开发', '<p><img src=\"/static/uploads/20190423/26be389379673cb00da77b83de17488b.jpg\" style=\"max-width:100%;\"><img src=\"/static/uploads/20190423/b32e3538877187da45dfb35b7b2183e9.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/e96b3b9d0a99284752ae5ec0e303e85e.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/eba13c14c8d6491d65ece3fbdd2cc2c5.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/0c9998ed4a1941b0f2c99a7f6ff69d29.jpg\" style=\"line-height: normal; max-width: 100%;\"><br></p><p><br></p>', '0', '0', '4', '0', null, '0', '1', '0', '2019-04-23 15:13:13', '0', '2019-04-23 15:59:02', null);
+INSERT INTO `blog_product` VALUES ('28', '0', '12', '分销商城开发', '/static/uploads/20190423/6e66c20d4e63d5fb38f921cc3c043d00.jpg', '分销商城开发', '<p><img src=\"/static/uploads/20190423/62ce9e6ad5a43d851c00d89aa83352bf.jpg\" style=\"max-width:100%;\"><img src=\"/static/uploads/20190423/995beb9d9e8924ddfb0f01e27bb1ac9c.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/0b4f093a64e5a0876ba8489fb191f37b.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/234a7046a3ba82d48ac9a57f7506a6b8.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/17886701f7cbd76ff6cae95b51894452.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/3be9e3fb611b567a713334a43048f507.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/6490580673d88814d327d008da9df798.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/306e77da7b9df826f0eaf0e65bfbfd58.jpg\" style=\"line-height: normal; max-width: 100%;\"><br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-23 15:13:59', '0', '2019-04-23 15:58:43', null);
+INSERT INTO `blog_product` VALUES ('29', '0', '8', '产品二维码系统开发', '/static/uploads/20190423/e308d11d68370bb3dc7d0338e6743e63.jpg', '分销商城开发', '<p><img src=\"/static/uploads/20190423/c92dfbaf91b56821d5cdd2edcf1a758e.jpg\" style=\"max-width:100%;\"><img src=\"/static/uploads/20190423/e31ca13f932219b7b91c56e888217975.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/e1c54c0855e4de2f41bb599c4f559ee0.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/7c97845355bbeb7d3e9fb32c1f826368.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/ca693995bd2a3f6187e54176cacacb93.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/047bdf010998725765f7e782f1ac20ba.jpg\" style=\"line-height: normal; max-width: 100%;\"><br></p><p><br></p>', '0', '0', '6', '0', null, '0', '1', '0', '2019-04-23 15:14:59', '0', '2019-04-23 15:58:12', null);
+INSERT INTO `blog_product` VALUES ('30', '0', '8', '小程序商城', '/static/uploads/20190423/c4d93cc16a175016899b99878b43d211.jpg', '小程序商城', '<p><img src=\"/static/uploads/20190423/4b0fb892ba20ca046fc28ed3f66db1c1.jpg\" style=\"max-width:100%;\"><img src=\"/static/uploads/20190423/d05ef2e28d1844796d5e2bad120e84a0.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/0f5135606408627eaee3f99918b68d23.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/59897fc531e93ce5326d6720d573349c.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/3f79ee8b385bda73ac6feb0e0b9e222f.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/3ceebcccaca1b096ecf441d656cfa974.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/837f0d658290d815edaf42fcb1e4b7f2.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/279f5096491273c6d8c9036c079f1491.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/0a0bc05b10f805ddc45ec341ec1f9362.jpg\" style=\"line-height: normal; max-width: 100%;\"><br></p><p><br></p>', '0', '0', '0', '0', null, '0', '1', '0', '2019-04-23 15:15:27', '0', '2019-04-23 15:57:51', null);
+INSERT INTO `blog_product` VALUES ('31', '0', '8', 'APP开发', '/static/uploads/20190423/a54195fefd879b026ea82ceee46684ff.jpg', 'APP开发', '<p><img src=\"/static/uploads/20190423/625a4d5a8438e4e0fd10a68a77f798c5.jpg\" style=\"max-width:100%;\"><img src=\"/static/uploads/20190423/480f6c381f65d37cb83107cd6ad6c617.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/4bd546f640a752345e67af1fda006a42.jpg\" style=\"line-height: normal; max-width: 100%;\"><img src=\"/static/uploads/20190423/ca01dd84d59f3a4853769015d6f606f2.jpg\" style=\"line-height: normal; max-width: 100%;\"><br></p><p><br></p>', '0', '0', '18', '0', null, '0', '1', '0', '2019-04-23 15:16:04', '0', '2019-04-23 15:57:28', null);
 
 -- ----------------------------
 -- Table structure for blog_product_tag
@@ -443,16 +428,21 @@ CREATE TABLE `blog_product_tag` (
   PRIMARY KEY (`id`),
   KEY `index_blog_product_tag_article_id` (`product_id`) USING BTREE,
   KEY `index_blog_product_tag_tag_id` (`tag_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='产品标签关联表';
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='产品标签关联表';
 
 -- ----------------------------
 -- Records of blog_product_tag
 -- ----------------------------
-INSERT INTO `blog_product_tag` VALUES ('4', '15', '28');
-INSERT INTO `blog_product_tag` VALUES ('5', '15', '29');
 INSERT INTO `blog_product_tag` VALUES ('11', '14', '31');
-INSERT INTO `blog_product_tag` VALUES ('14', '26', '27');
-INSERT INTO `blog_product_tag` VALUES ('15', '26', '30');
+INSERT INTO `blog_product_tag` VALUES ('31', '13', '34');
+INSERT INTO `blog_product_tag` VALUES ('32', '13', '33');
+INSERT INTO `blog_product_tag` VALUES ('33', '15', '35');
+INSERT INTO `blog_product_tag` VALUES ('34', '26', '33');
+INSERT INTO `blog_product_tag` VALUES ('35', '31', '39');
+INSERT INTO `blog_product_tag` VALUES ('36', '30', '38');
+INSERT INTO `blog_product_tag` VALUES ('37', '29', '37');
+INSERT INTO `blog_product_tag` VALUES ('38', '28', '37');
+INSERT INTO `blog_product_tag` VALUES ('39', '27', '36');
 
 -- ----------------------------
 -- Table structure for blog_search
@@ -540,7 +530,7 @@ CREATE TABLE `blog_tag` (
   `create_by` int(10) DEFAULT '0' COMMENT '创建人',
   PRIMARY KEY (`id`),
   KEY `index_blog_tag_title` (`tag_title`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客标签表';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客标签表';
 
 -- ----------------------------
 -- Records of blog_tag
@@ -554,6 +544,7 @@ INSERT INTO `blog_tag` VALUES ('21', '其他类', null, '0', '2019-04-18 11:29:0
 INSERT INTO `blog_tag` VALUES ('22', '科技感', null, '0', '2019-04-18 11:29:05', '0');
 INSERT INTO `blog_tag` VALUES ('23', '质感立体', null, '0', '2019-04-18 11:29:05', '0');
 INSERT INTO `blog_tag` VALUES ('24', '123', null, '0', '2019-04-22 16:47:32', '0');
+INSERT INTO `blog_tag` VALUES ('25', '云仓系统开发', null, '0', '2019-04-23 17:52:30', '0');
 
 -- ----------------------------
 -- Table structure for blog_website_link
@@ -569,13 +560,15 @@ CREATE TABLE `blog_website_link` (
   `status` tinyint(1) DEFAULT '0' COMMENT '状态',
   `create_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='站点友链';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='站点友链';
 
 -- ----------------------------
 -- Records of blog_website_link
 -- ----------------------------
-INSERT INTO `blog_website_link` VALUES ('1', '百度一下', null, 'https://www.baidu.com', null, '2', '0', '2018-08-29 12:30:32');
-INSERT INTO `blog_website_link` VALUES ('2', 'hao123', null, 'https://www.hao123.com', '', '1', '0', '2018-08-29 12:31:44');
+INSERT INTO `blog_website_link` VALUES ('1', '防伪系统', '', 'http://gzbaoman.com', '', '2', '0', '2018-08-29 12:30:32');
+INSERT INTO `blog_website_link` VALUES ('2', '得翼网络', '', 'http://gzdy88.com', '', '1', '0', '2018-08-29 12:31:44');
+INSERT INTO `blog_website_link` VALUES ('3', '控价系统', null, 'http://zhuoxiansheng.vip', null, '0', '0', '2019-04-23 14:42:09');
+INSERT INTO `blog_website_link` VALUES ('4', '云仓系统', null, 'http://gzdy88.vip', null, '0', '0', '2019-04-23 14:42:31');
 
 -- ----------------------------
 -- Table structure for casecategory
@@ -594,19 +587,18 @@ CREATE TABLE `casecategory` (
   `update_by` int(10) DEFAULT NULL COMMENT '更新人',
   PRIMARY KEY (`id`),
   KEY `index_blog_nav_title` (`title`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='案例栏目表';
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='案例栏目表';
 
 -- ----------------------------
 -- Records of casecategory
 -- ----------------------------
-INSERT INTO `casecategory` VALUES ('9', '爱斯贝儿品牌合作', null, '', '0', '0', '2019-04-19 11:26:36', '0', null, null);
-INSERT INTO `casecategory` VALUES ('10', 'cicilove品牌合作', null, '', '0', '0', '2019-04-19 14:26:33', '0', null, null);
-INSERT INTO `casecategory` VALUES ('11', '凡玊品牌合作', null, '', '0', '0', '2019-04-19 14:26:44', '0', null, null);
-INSERT INTO `casecategory` VALUES ('12', 'PMA品牌合作', null, '', '0', '0', '2019-04-19 14:26:59', '0', null, null);
-INSERT INTO `casecategory` VALUES ('13', '喵本国际品牌合作', null, '', '0', '0', '2019-04-19 14:27:16', '0', null, null);
-INSERT INTO `casecategory` VALUES ('14', '三生雪品牌合作', null, '', '0', '0', '2019-04-19 14:27:28', '0', null, null);
-INSERT INTO `casecategory` VALUES ('15', 'les pela品牌合作', null, '', '0', '0', '2019-04-19 14:27:39', '0', null, null);
-INSERT INTO `casecategory` VALUES ('16', '婍人儿品牌合作', null, '', '0', '0', '2019-04-19 14:27:49', '0', null, null);
+INSERT INTO `casecategory` VALUES ('9', '爱斯贝儿品牌合作', null, '', '0', '0', '2019-04-19 11:26:36', '0', '2019-04-24 11:48:50', null);
+INSERT INTO `casecategory` VALUES ('10', 'cicilove品牌合作', null, '', '0', '0', '2019-04-19 14:26:33', '0', '2019-04-24 11:48:47', null);
+INSERT INTO `casecategory` VALUES ('11', '凡玊品牌合作', null, '', '0', '0', '2019-04-19 14:26:44', '0', '2019-04-24 11:48:44', null);
+INSERT INTO `casecategory` VALUES ('12', 'PMA品牌合作', null, '', '0', '0', '2019-04-19 14:26:59', '0', '2019-04-24 11:48:40', null);
+INSERT INTO `casecategory` VALUES ('13', '喵本国际品牌合作', null, '', '1', '0', '2019-04-19 14:27:16', '0', '2019-04-24 11:48:33', null);
+INSERT INTO `casecategory` VALUES ('14', '三生雪品牌合作', null, '', '0', '0', '2019-04-19 14:27:28', '0', '2019-04-24 11:48:30', null);
+INSERT INTO `casecategory` VALUES ('17', '云仓系统开发', null, '', '0', '0', '2019-04-24 11:34:51', '0', '2019-04-24 11:47:29', null);
 
 -- ----------------------------
 -- Table structure for case_tag
@@ -621,7 +613,7 @@ CREATE TABLE `case_tag` (
   `create_by` int(10) DEFAULT '0' COMMENT '创建人',
   PRIMARY KEY (`id`),
   KEY `index_case_tag_title` (`tag_title`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='案例标签表';
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='案例标签表';
 
 -- ----------------------------
 -- Records of case_tag
@@ -633,6 +625,8 @@ INSERT INTO `case_tag` VALUES ('35', '控价', null, '0', '2019-04-19 14:15:30',
 INSERT INTO `case_tag` VALUES ('36', '授权', null, '0', '2019-04-19 14:15:30', '0');
 INSERT INTO `case_tag` VALUES ('37', '代理管理', null, '0', '2019-04-19 14:16:28', '0');
 INSERT INTO `case_tag` VALUES ('38', '防伪', null, '0', '2019-04-19 14:17:06', '0');
+INSERT INTO `case_tag` VALUES ('39', '防伪/授权/控价', null, '0', '2019-04-24 11:30:59', '0');
+INSERT INTO `case_tag` VALUES ('40', '入仓/云仓/提货', null, '0', '2019-04-24 11:32:41', '0');
 
 -- ----------------------------
 -- Table structure for download_config
@@ -744,7 +738,7 @@ CREATE TABLE `product_tag` (
   `create_by` int(10) DEFAULT '0' COMMENT '创建人',
   PRIMARY KEY (`id`),
   KEY `index_product_tag_title` (`tag_title`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='产品标签表';
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='产品标签表';
 
 -- ----------------------------
 -- Records of product_tag
@@ -755,6 +749,13 @@ INSERT INTO `product_tag` VALUES ('29', '人工智能', null, '0', '2019-04-18 1
 INSERT INTO `product_tag` VALUES ('30', '人工智能二', '', '0', '2019-04-18 14:17:47', '0');
 INSERT INTO `product_tag` VALUES ('31', '质感', null, '0', '2019-04-18 17:29:29', '0');
 INSERT INTO `product_tag` VALUES ('32', '123', '', '0', '2019-04-19 13:59:00', '0');
+INSERT INTO `product_tag` VALUES ('33', '控价', null, '0', '2019-04-23 09:57:11', '0');
+INSERT INTO `product_tag` VALUES ('34', '微商控价系统', null, '0', '2019-04-23 15:03:44', '0');
+INSERT INTO `product_tag` VALUES ('35', '小程序', null, '0', '2019-04-23 15:10:34', '0');
+INSERT INTO `product_tag` VALUES ('36', '云仓系统开发', null, '0', '2019-04-23 15:13:13', '0');
+INSERT INTO `product_tag` VALUES ('37', '分销商城开发', null, '0', '2019-04-23 15:13:59', '0');
+INSERT INTO `product_tag` VALUES ('38', '小程序商城', null, '0', '2019-04-23 15:15:27', '0');
+INSERT INTO `product_tag` VALUES ('39', 'APP开发', null, '0', '2019-04-23 15:16:04', '0');
 
 -- ----------------------------
 -- Table structure for sms_template
@@ -849,15 +850,15 @@ INSERT INTO `system_config` VALUES ('20', 'HomeUrl', 'basic', 'string', 'https:/
 INSERT INTO `system_config` VALUES ('21', 'VercodeType', 'basic', 'tinyint', '1', '验证码登录开关（0：不开启，1：开启）', '3', '2018-07-17 21:52:00', '0', '2018-07-18 02:38:10', null);
 INSERT INTO `system_config` VALUES ('32', 'Describe', 'basic', 'string', '广州得翼有限公司', '后台顶部的名字', '0', '2018-07-30 23:01:34', '0', null, null);
 INSERT INTO `system_config` VALUES ('33', 'Author', 'basic', 'string', '卓经理：18620075349', '联系人一', '1', '2018-07-30 23:02:41', '0', null, null);
-INSERT INTO `system_config` VALUES ('34', 'Email', 'basic', 'string', '联系邮箱：1486111354@qq.com / 1486111354@qq.com', '联系邮箱', '8', '2018-07-30 23:03:15', '0', null, null);
+INSERT INTO `system_config` VALUES ('34', 'Email', 'basic', 'string', '联系邮箱：793755415@qq.com', '联系邮箱', '0', '2018-07-30 23:03:15', '0', null, null);
 INSERT INTO `system_config` VALUES ('35', 'BlogFooterName', 'basic', 'string', 'Copyright © 2018-2019 广东得翼网络科技有限公司', '网站底部', '0', '2018-08-13 00:32:50', '0', null, null);
 INSERT INTO `system_config` VALUES ('36', 'MailHost', 'mail', 'string', 'smtp.163.com', '发送方的SMTP服务器地址', '7', '2018-08-31 15:39:04', '0', null, null);
 INSERT INTO `system_config` VALUES ('37', 'MailUsername', 'mail', 'string', '', '发送方的QQ邮箱用户名', '7', '2018-08-31 15:39:43', '0', null, null);
 INSERT INTO `system_config` VALUES ('38', 'MailPassword', 'mail', 'string', '', '第三方授权登录码', '7', '2018-08-31 15:39:53', '0', null, null);
-INSERT INTO `system_config` VALUES ('39', 'MailNickname', 'mail', 'string', '广东得翼网络科技有限公司', '设置发件人昵称', '7', '2018-08-31 15:40:44', '0', null, null);
-INSERT INTO `system_config` VALUES ('40', 'MailReplyTo', 'mail', 'string', 'www99php@163.com', '回复邮件地址', '7', '2018-08-31 15:41:03', '0', null, null);
-INSERT INTO `system_config` VALUES ('41', 'AccessKeyId', 'sms', 'string', '', '阿里大于公钥', '7', '2018-08-31 23:58:34', '0', null, null);
-INSERT INTO `system_config` VALUES ('42', 'AccessKeySecret', 'sms', 'string', '', '阿里大鱼私钥', '7', '2018-08-31 23:58:45', '0', null, null);
+INSERT INTO `system_config` VALUES ('39', 'OursName', 'basic', 'string', '广东得翼网络科技有限公司', '公司全称', '0', '2018-08-31 15:40:44', '0', null, null);
+INSERT INTO `system_config` VALUES ('40', 'MailReplyTo', 'mail', 'string', 'null', '回复邮件地址', '7', '2018-08-31 15:41:03', '0', null, null);
+INSERT INTO `system_config` VALUES ('41', 'BusLine', 'basic', 'string', '乘坐车到元下田站(步行约530米)', '公交线路', '0', '2018-08-31 23:58:34', '0', null, null);
+INSERT INTO `system_config` VALUES ('42', 'SubLine', 'basic', 'string', '白云大道北站C2出口下车(步行约1400米)', '地铁路线', '0', '2018-08-31 23:58:45', '0', null, null);
 INSERT INTO `system_config` VALUES ('43', 'SignName', 'sms', 'string', '广东得翼网络科技有限公司', '短信注册模板', '7', '2018-09-01 00:08:55', '0', null, null);
 INSERT INTO `system_config` VALUES ('44', 'CodeTime', 'code', 'int', '60', '验证码发送间隔时间', '5', '2018-09-04 18:03:52', '0', null, null);
 INSERT INTO `system_config` VALUES ('45', 'CodeDieTime', 'code', 'int', '300', '验证码有效期', '5', '2018-09-04 18:17:26', '0', null, null);
@@ -867,9 +868,9 @@ INSERT INTO `system_config` VALUES ('48', 'LoginDuration', 'basic', 'int', '7200
 INSERT INTO `system_config` VALUES ('49', 'AdminModuleName', 'basic', 'int', 'console', '后台登录模块名', '1', '2018-10-01 01:22:05', '0', null, null);
 INSERT INTO `system_config` VALUES ('50', 'CleanCachePassword', 'basic', 'string', 'chung951222', '刷新缓存的密码', '3', '2018-10-01 01:42:16', '0', null, null);
 INSERT INTO `system_config` VALUES ('51', 'contact_email', 'spider', 'string', '', '待续', '0', '2018-11-19 10:46:26', '0', null, null);
-INSERT INTO `system_config` VALUES ('52', 'qq', 'basic', 'string', 'QQ：1486111354 / 1491665985', 'QQ', '0', '2018-11-19 10:46:36', '0', null, null);
+INSERT INTO `system_config` VALUES ('52', 'qq', 'basic', 'string', '180-5428-5450', 'QQ', '0', '2018-11-19 10:46:36', '0', null, null);
 INSERT INTO `system_config` VALUES ('53', 'address', 'basic', 'string', '地址：广东省广州市白云区永泰商务中心B219', '地址', '0', '2018-11-19 10:46:46', '0', null, null);
-INSERT INTO `system_config` VALUES ('54', 'Author2', 'basic', 'string', '黄经理 ：15814868715', '联系人二', '0', '2019-04-18 18:26:46', '0', null, null);
+INSERT INTO `system_config` VALUES ('54', 'Author2', 'basic', 'string', '黄经理 ：180-5428-5450', '联系人二', '0', '2019-04-18 18:26:46', '0', null, null);
 
 -- ----------------------------
 -- Table structure for system_login_record
@@ -889,7 +890,7 @@ CREATE TABLE `system_login_record` (
   `status` tinyint(1) DEFAULT '0' COMMENT '状态（0：失败，1：成功）',
   `create_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=527 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客会员登录记录';
+) ENGINE=InnoDB AUTO_INCREMENT=543 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='博客会员登录记录';
 
 -- ----------------------------
 -- Records of system_login_record
@@ -977,6 +978,22 @@ INSERT INTO `system_login_record` VALUES ('523', '1', '1', '127.0.0.1', '', '', 
 INSERT INTO `system_login_record` VALUES ('524', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-22 14:44:42');
 INSERT INTO `system_login_record` VALUES ('525', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-22 14:45:41');
 INSERT INTO `system_login_record` VALUES ('526', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-22 16:05:40');
+INSERT INTO `system_login_record` VALUES ('527', '0', '1', '127.0.0.1', '', '', '', '', '', '【登录过期】正在退出后台系统！', '1', '2019-04-22 19:07:35');
+INSERT INTO `system_login_record` VALUES ('528', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-22 19:07:47');
+INSERT INTO `system_login_record` VALUES ('529', '0', '1', '127.0.0.1', '', '', '', '', '', '【登录过期】正在退出后台系统！', '1', '2019-04-23 09:50:40');
+INSERT INTO `system_login_record` VALUES ('530', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-23 09:52:02');
+INSERT INTO `system_login_record` VALUES ('531', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-23 14:33:10');
+INSERT INTO `system_login_record` VALUES ('532', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-23 15:31:03');
+INSERT INTO `system_login_record` VALUES ('533', '0', '1', '127.0.0.1', '', '', '', '', '', '【登录过期】正在退出后台系统！', '1', '2019-04-23 17:35:27');
+INSERT INTO `system_login_record` VALUES ('534', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-23 17:44:47');
+INSERT INTO `system_login_record` VALUES ('535', '0', '1', '127.0.0.1', '', '', '', '', '', '【登录过期】正在退出后台系统！', '1', '2019-04-24 09:50:05');
+INSERT INTO `system_login_record` VALUES ('536', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-24 09:51:19');
+INSERT INTO `system_login_record` VALUES ('537', '0', '1', '127.0.0.1', '', '', '', '', '', '【登录过期】正在退出后台系统！', '1', '2019-04-24 11:51:21');
+INSERT INTO `system_login_record` VALUES ('538', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-24 11:51:34');
+INSERT INTO `system_login_record` VALUES ('539', '0', '1', '127.0.0.1', '', '', '', '', '', '【登录过期】正在退出后台系统！', '1', '2019-04-24 14:17:23');
+INSERT INTO `system_login_record` VALUES ('540', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-24 14:17:30');
+INSERT INTO `system_login_record` VALUES ('541', '0', '1', '127.0.0.1', '', '', '', '', '', '【登录过期】正在退出后台系统！', '1', '2019-04-24 16:26:49');
+INSERT INTO `system_login_record` VALUES ('542', '1', '1', '127.0.0.1', '', '', '', '', '', '【账号登录】登录成功，正在进入系统！', '1', '2019-04-24 16:26:56');
 
 -- ----------------------------
 -- Table structure for system_menu
@@ -1029,9 +1046,9 @@ INSERT INTO `system_menu` VALUES ('189', '178', '广告管理', '0', '', '&#xe85
 INSERT INTO `system_menu` VALUES ('190', '189', '轮播图配置', '0', '', '&#xe64a;', 'admin/blog.slider/index', '', '_self', '2.00', '1', '', '0', '2018-09-21 01:17:44', null, null);
 INSERT INTO `system_menu` VALUES ('210', '185', '登录记录', '0', '', '&#xe665;', 'admin/blog.login_record/index', '', '_self', '2.00', '1', '', '0', '2018-09-26 17:33:29', null, null);
 INSERT INTO `system_menu` VALUES ('211', '179', '文章分类', '0', '', '&#xe664;', 'admin/blog.category/index', '', '_self', '0.00', '1', '', '0', '2018-09-27 01:34:06', null, null);
-INSERT INTO `system_menu` VALUES ('212', '179', '文章评论', '0', '', '&#xe66a;', 'admin/blog.comment/index', '', '_self', '0.00', '1', '', '0', '2018-10-11 21:04:53', null, null);
+INSERT INTO `system_menu` VALUES ('212', '179', '文章评论', '0', '', '&#xe66a;', 'admin/blog.comment/index', '', '_self', '0.00', '0', '', '0', '2018-10-11 21:04:53', null, null);
 INSERT INTO `system_menu` VALUES ('213', '178', '常用工具', '0', '', '&#xe665;', '#', '', '_self', '0.00', '1', '', '0', '2018-10-11 22:18:28', null, null);
-INSERT INTO `system_menu` VALUES ('214', '213', '配置管理', '0', '', '&#xe716;', 'admin/blog.config/index', '', '_self', '0.00', '1', '', '0', '2018-10-11 22:19:02', null, null);
+INSERT INTO `system_menu` VALUES ('214', '213', '前台公共配置管理', '0', '', '&#xe716;', 'admin/blog.config/index', '', '_self', '0.00', '1', '', '0', '2018-10-11 22:19:02', null, null);
 INSERT INTO `system_menu` VALUES ('215', '213', '友情链接', '0', '', '&#xe64d;', 'admin/blog.website_link/index', '', '_self', '0.00', '1', '', '0', '2018-10-11 22:19:32', null, null);
 INSERT INTO `system_menu` VALUES ('216', '213', '公告管理', '0', '', '&#xe667;', 'admin/blog.notice/index', '', '_self', '0.00', '1', '', '0', '2018-10-11 22:21:02', null, null);
 INSERT INTO `system_menu` VALUES ('217', '178', '搜索管理', '0', '', '&#xe615;', '#', '', '_self', '0.00', '0', '', '0', '2018-10-11 22:23:04', null, null);

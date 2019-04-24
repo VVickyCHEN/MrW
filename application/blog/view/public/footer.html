@@ -5,33 +5,30 @@
                 <div class="service_col_list fl">
                     <ul>
                         <h5>友情连接</h5>
-                        <li><a href="http://gzdy88.com" atl="得翼网络" title="得翼网络">得翼网络</a></li>
-                        <li><a href="http://gzbaoman.com" atl="防伪系统" title="防伪系统">防伪系统</a></li>
-                        <li><a href="http://zhuoxiansheng.vip" atl="控价系统" title="控价系统">控价系统</a></li>
-                        <li><a href="http://gzdy88.vip" atl="云仓系统" title="云仓系统">云仓系统</a></li>
+                        {volist name="website_link" id="vo"}
+                            <li>
+                                <a href="{$vo.href}">{$vo.website_name}</a>
+                            </li>
+                        {/volist}
+                        
+                        
                     </ul>
                     <ul>
                         <h5>公司产品</h5>
-
-                        <li><a href="productxq.html?type=3" title="控价系统" atl="控价系统">控价系统</a></li>
-                        
-                        <li><a href="productxq.html?type=4" title="云仓系统" atl="云仓系统">云仓系统</a></li>
-                        <li><a href="productxq.html?type=5" title="分销商城" atl="分销商城">分销商城</a></li>
-                        <li><a href="productxq.html?type=1" title="小程序防伪" atl="小程序防伪">小程序防伪</a></li>
-                        <li><a href="productxq.html?type=7" title="小程序商城" atl="小程序商城">小程序商城</a></li>
-                        <li><a href="productxq.html?type=2" title="SEO优化" atl="SEO优化">SEO优化</a></li>
-                        <li><a href="productxq.html?type=6" title="产品二维码" atl="产品二维码">产品二维码</a></li>
-                        <li><a href="productxq.html?type=8" title="APP定制" atl="APP定制">APP定制</a>
-                        </li>
+                        {volist name="product_list" id="vo"}
+                            <li>
+                                <a href="{:url('@blog/product/detail',['id'=>$vo.id])}" title="{$vo.title}" atl="">
+                                   {$vo.title} 
+                                </a>
+                            </li>
+                        {/volist}
 
                     </ul>
                     <ul>
                         <h5>联系方式</h5>
-                        <li>QQ：{$SysInfo.qq}</li>
-                        <li>手机号：180-5428-5450</li>
-                        <li>微信号：180-5428-5450</li>
-                        <li>公司名称：{$SysInfo.OursName}</li>
-                        <li>{$SysInfo.address}</li>
+                        {volist name="config_list" id="vo"}
+                            <li>{$vo.remark}:{$vo.value}</li>
+                        {/volist}
 
                     </ul>
                 </div>
@@ -41,7 +38,7 @@
                         <p>{$SysInfo.Author2}</p>
                     </div>
                     <div class="service_qr fl">
-                        <div class="img"><img src="__PUBLIC__/images/wechat.jpg" alt="我的微信"></div>
+                        <div class="img"><img src="{$ScanFollow}" alt="我的微信"></div>
                         <p>我的微信</p>
                     </div>
                 </div>

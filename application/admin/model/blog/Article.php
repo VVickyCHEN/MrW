@@ -128,7 +128,7 @@ class Article extends ModelService {
         is_array($id) ? $del = self::whereIn('id', $id) : $del = self::where('id', $id);
         self::startTrans();
         try {
-            $del = $del->update(['is_deleted' => 1]);
+            $del = $del->delete($id);
             self::commit();
         } catch (\Exception $e) {
             self::rollback();

@@ -77,7 +77,17 @@ class Category extends AdminController {
             if (true !== $validate) return __error($validate);
 
             //保存数据,返回结果
-            return $this->model->addData($post);
+            $category = $this->model;
+            $category->update_at = date('Y-m-d H:i:s');
+            $res = $category->save($post);
+            if($res){
+                // error时候code为0
+                // 当code为0时。才显示成功
+                $this->error('添加成功');
+            }else{
+                return __error($category->error());
+            }
+
         }
     }
 
@@ -105,8 +115,18 @@ class Category extends AdminController {
             $validate = $this->validate($post, 'app\admin\validate\blog\Category.edit');
             if (true !== $validate) return __error($validate);
 
-            //保存数据,返回结果
-            return $this->model->editData($post);
+            $category = $this->model;
+            $category->update_at = date('Y-m-d H:i:s');
+            
+            $res = $category->isUpdate(true)->save($post);
+            if($res){
+                // error时候code为0
+                // 当code为0时。才显示成功
+                $this->error('添加成功');
+            }else{
+                return __error($category->error());
+            }
+            
         }
     }
 

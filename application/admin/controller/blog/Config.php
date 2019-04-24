@@ -43,7 +43,7 @@ class Config extends AdminController
 
             //基础数据
             $basic_data = [
-                'title' => '博客配置列表',
+                'title' => '公司公共配置列表',
                 'data'  => $this->model->getDataList(),
             ];
             $this->assign($basic_data);

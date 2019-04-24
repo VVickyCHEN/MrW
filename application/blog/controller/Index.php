@@ -23,7 +23,7 @@ class Index extends BlogController
         $where['is_deleted']=0;
         $where['status']=0;
         $limit = 8;
-  
+    
         $basic_data = model('Casement')->order('create_at', 'desc')->field(['category_id,id,title,cover_img,create_at'])->where($where)->paginate($limit,false,['query'=>request()->param()])->each(function($item,$key){
 
         	$cat_id = $item['category_id'];

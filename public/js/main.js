@@ -1,4 +1,8 @@
+
 $(document).ready(function() {
+
+
+
 	var p = 0,
 		t = 0;
 	var head = $('.header');
@@ -37,6 +41,7 @@ $(document).ready(function() {
 		});
 	});
 });
+
 // index
 $(function(){
 	// 模式

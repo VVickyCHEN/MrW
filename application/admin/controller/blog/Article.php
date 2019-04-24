@@ -131,7 +131,7 @@ class Article extends AdminController {
         }
 
         //执行删除操作
-        return $this->model->delData($get['id']);
+        return $this->model->delData($get['id'],true);
     }
 
     /**

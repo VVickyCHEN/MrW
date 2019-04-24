@@ -40,9 +40,9 @@ class CaseCategory extends ModelService {
     public static function getcasegoryList() {
         $order_casegory_list = [
             'sort'      => 'desc',
-            'create_at' => 'asc',
+            'update_at' => 'desc',
         ];
-        $casegory_list = self::field('id, title, create_at')
+        $casegory_list = self::field('id, title,sort, update_at')
             ->where(['status' => 0])
             ->order($order_casegory_list)
             ->select();
@@ -77,7 +77,13 @@ class CaseCategory extends ModelService {
         }
 
         $count = self::where($where)->count();
-        $data = self::where($where)->page($page, $limit)->order(['create_at' => 'desc'])->select();
+
+        $order = [
+            'sort'      => 'asc',
+            'update_at' => 'desc',
+        ];
+
+        $data = self::where($where)->page($page, $limit)->order($order)->select();
         empty($data) ? $msg = '暂无数据！' : $msg = '查询成功！';
         $info = [
             'limit'        => $limit,

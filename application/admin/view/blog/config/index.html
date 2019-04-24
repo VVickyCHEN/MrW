@@ -4,13 +4,13 @@
 {/block}
 {block name="cotent"}
 <form onsubmit="return false;" action="{:request()->url()}" data-auto="true" method="post" class='form-horizontal layui-form padding-top-20'>
-
+<!-- 
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
         <legend>站点配置</legend>
-    </fieldset>
+    </fieldset> -->
 
     <div class="layui-form  top-10">
-        <div class="layui-form-item">
+      <!--   <div class="layui-form-item">
             <label class="layui-form-label">SiteName<i class="require"></i></label>
             <div class="layui-input-inline">
                 <input type="text" id="SiteName" value="{$data.SiteName|default=''}" class="layui-input">
@@ -32,7 +32,7 @@
                 <textarea id="SiteDescription" class="layui-textarea">{$data.SiteDescription|default=''}</textarea>
             </div>
             <div class="layui-form-mid layui-word-aux">站点描述</div>
-        </div>
+        </div> -->
 
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
             <legend>登录配置</legend>
@@ -47,43 +47,51 @@
         </div>
 
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-            <legend>站长信息</legend>
+            <legend>前台底部信息</legend>
         </fieldset>
 
         <div class="layui-form-item">
-            <label class="layui-form-label">SiteUsername<i class="require"></i></label>
+            <label class="layui-form-label">qq<i class="require"></i></label>
             <div class="layui-input-inline">
-                <input type="text" id="SiteUsername" value="{$data.SiteUsername|default=''}" class="layui-input">
+                <input type="text" id="qq" value="{$data.qq|default=''}" class="layui-input">
             </div>
-            <div class="layui-form-mid layui-word-aux">站长姓名</div>
+            <div class="layui-form-mid layui-word-aux">QQ</div>
         </div>
 
         <div class="layui-form-item">
-            <label class="layui-form-label">SiteJob<i class="require"></i></label>
+            <label class="layui-form-label">手机<i class="require"></i></label>
             <div class="layui-input-inline">
-                <input type="text" id="SiteJob" value="{$data.SiteJob|default=''}" class="layui-input">
+                <input type="text" id="phone" value="{$data.phone|default=''}" class="layui-input">
             </div>
-            <div class="layui-form-mid layui-word-aux">站长职业</div>
+            <div class="layui-form-mid layui-word-aux">手机号码</div>
         </div>
 
         <div class="layui-form-item">
-            <label class="layui-form-label">SiteEmail<i class="require"></i></label>
+            <label class="layui-form-label">微信<i class="require"></i></label>
             <div class="layui-input-inline">
-                <input type="text" id="SiteEmail" value="{$data.SiteEmail|default=''}" class="layui-input">
+                <input type="text" id="wechat" value="{$data.wechat|default=''}" class="layui-input">
             </div>
-            <div class="layui-form-mid layui-word-aux">站长邮箱</div>
+            <div class="layui-form-mid layui-word-aux">微信账号</div>
         </div>
 
         <div class="layui-form-item">
-            <label class="layui-form-label">SiteLocation<i class="require"></i></label>
+            <label class="layui-form-label">地址<i class="require"></i></label>
             <div class="layui-input-inline">
-                <input type="text" id="SiteLocation" value="{$data.SiteLocation|default=''}" class="layui-input">
+                <textarea id="SiteLocation" class="layui-textarea">{$data.SiteLocation|default=''}</textarea>
             </div>
             <div class="layui-form-mid layui-word-aux">工作地址</div>
         </div>
 
         <div class="layui-form-item">
-            <label class="layui-form-label">ScanFollow<i class="require"></i></label>
+            <label class="layui-form-label">公司名称<i class="require"></i></label>
+            <div class="layui-input-inline">
+                <textarea id="company_name" class="layui-textarea">{$data.company_name|default=''}</textarea>
+            </div>
+            <div class="layui-form-mid layui-word-aux">公司名称</div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">我的微信<i class="require"></i></label>
             <div class="layui-input-inline" id="upload_image_div">
                 <input type="hidden" id="ScanFollow" value="{$data.ScanFollow|default=''}">
                 <div class="uploadimage" data-upload-image="one" data-upload-id="ScanFollow" data-upload-div="upload_image_div" style="background-image: url(__STATIC__/image/admin/upload.png);">
@@ -116,13 +124,14 @@
     $("#configBtn").on("click", function () {
         var url = '{:url("$thisRequest")}';
         var data = {
-            SiteName: $("#SiteName").val(),
-            SiteKeywords: $("#SiteKeywords").val(),
-            SiteDescription: $("#SiteDescription").val(),
+            // SiteName: $("#SiteName").val(),
+            // SiteKeywords: $("#SiteKeywords").val(),
+            // SiteDescription: $("#SiteDescription").val(),
+            company_name:$('#company_name').val(),
             LoginDuration: $("#LoginDuration").val(),
-            SiteUsername: $("#SiteUsername").val(),
-            SiteJob: $("#SiteJob").val(),
-            SiteEmail: $("#SiteEmail").val(),
+            qq: $("#qq").val(),
+            phone: $("#phone").val(),
+            wechat: $("#wechat").val(),
             SiteLocation: $("#SiteLocation").val(),
             ScanFollow: $("#ScanFollow").val(),
         };

@@ -61,21 +61,53 @@ class BlogController extends Controller {
      */
     protected $SysInfo = [];
 
+    protected $website_link = [];// 友情链接
+
+    protected $product_list = [];//footer的产品
+
     /**
      * 构造函数
      * BlogController constructor.
      */
     public function __construct() {
         parent::__construct();
-        // $this->is_qiniu && $this->iniQiniu();
-        $this->BlogInfo = Cache::get('BlogInfo');
-        $module_controller = app('request')->module() . '/' . app('request')->controller();
-        //QQ快捷登录模块无需执行，执行将报错
-        if ($module_controller != 'blog/Oauth') {
-            $this->member = session('member');
-            if (!empty($this->member)) $this->checkLoginOver($this->member);
-            $this->is_login && $this->checkLogin();
+    
+        // 友情链接
+        $this->website_link = Cache::get('website_link');
+        if(empty($this->website_link)){
+            Db::table('blog_website_link')->cache('website_link',600)->select();
+            $this->website_link = Cache::get('website_link');
+            $this->assign('website_link',$this->website_link);
+        }else{
+
+            $this->assign('website_link',$this->website_link);
         }
+
+        //footer的产品
+        $this->product_list = Cache::get('product_list');
+        if(empty($this->product_list)){
+            Db::table('blog_product')->cache('product_list',600)->select();
+            $this->product_list = Cache::get('product_list');
+            // echo '我是刚缓存';die;
+            $this->assign('product_list',$this->product_list);
+        }else{
+            $this->assign('product_list',$this->product_list);
+        }
+
+        //前台公共配置管理
+        $this->config_list = Cache::get('config_list');
+        if(empty($this->config_list)){
+            Db::table('blog_config')->where('id','in',[40,41,42,43,44])->cache('config_list',600)->select();
+
+            $this->config_list = Cache::get('config_list');
+            $this->assign('config_list',$this->config_list);
+        }else{
+            $this->assign('config_list',$this->config_list);
+        }
+
+        $ScanFollow = Db::table('blog_config')->where('id','in',[36])->value('value');
+        $this->assign('ScanFollow',$ScanFollow);
+       
     }
 
     /**

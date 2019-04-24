@@ -41,24 +41,13 @@ class Newlist extends BlogController {
         $this->assign('total',$total);
 
         // 分类新闻
-        $basic_data = model('blog_category')->order('update_at', 'desc')->field(['category_id,id,title,cover_img,update_at'])->where($where)->paginate($limit,false,['query'=>request()->param()])->each(function($item,$key){
+        $cate_list = model('Category')->order('update_at', 'desc')->field(['id,title,update_at'])->paginate($limit,false,['query'=>request()->param()])->each(function($item,$key){
 
-        	$cat_id = $item['category_id'];
-        	$item['category_name'] = db('Procategory')->where(['id'=>$cat_id])->value('title');
-
-        	$pro_id = $item['id'];
-        	$exit_tag = db('blog_product_tag')->where(['Product_id'=>$pro_id])->column('tag_id');
-        	if(count($exit_tag)>1){
-        		foreach ($exit_tag as $val) {
-        			$tag_title[] = db('Product_tag')->where(['id'=>$val])->value('tag_title');
-        		}
-        		$item['tag_title'] = $tag_title;
-        	}else{
-        		$item['tag_title'] = '';
-        	}
-
+        	// 查询五条新闻的id和标题
+        	$item['new_list'] = db('blog_article')->where(['category_id'=>$item['id']])->order('update_at','desc')->field('title,id,update_at')->limit(5)->select(); 
+        	
         });
-
+        $this->assign('cate_list',$cate_list);
 
         return $this->fetch();
     }
@@ -68,15 +57,26 @@ class Newlist extends BlogController {
         if (!$this->request->isPost()) {
             $id = $this->request->param('id');
             //获取文章信息
-            if (empty($id)) return msg_error('暂无新闻信息，请稍后再试');
+            if (empty($id)) return msg_error('暂无新闻信息，请稍后再试','/blog/newlist');
 
             $detail = $this->model->where(['status' => 0, 'is_deleted' => 0, 'id' => $id])->find();
-            if (empty($detail)) return msg_error('暂无文章信息，请稍后再试');
+            if (empty($detail)) return msg_error('暂无文章信息，请稍后再试','/blog/newlist');
 
             //新增文章点击量
             $this->model->where(['id' => $id])->setInc('clicks', 1);
 
             $this->assign('detail',$detail);
+
+            $limit = 5;
+             // 分类新闻
+	        $cate_list = model('Category')->order('update_at', 'desc')->field(['id,title,update_at'])->paginate($limit,false,['query'=>request()->param()])->each(function($item,$key){
+
+	        	// 查询五条新闻的id和标题
+	        	$item['new_list'] = db('blog_article')->where(['category_id'=>$item['id']])->order('update_at','desc')->field('title,id,update_at')->limit(5)->select(); 
+	        	
+	        });
+	        $this->assign('cate_list',$cate_list);
+
             return $this->fetch();
         }
     }

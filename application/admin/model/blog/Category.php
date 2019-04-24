@@ -29,6 +29,7 @@ class Category extends ModelService {
      * @var string
      */
     protected $table = 'blog_category';
+    protected $updateTime = 'update_at';
 
     /**
      * 获取分类列数据
@@ -40,9 +41,9 @@ class Category extends ModelService {
     public static function getCategoryList() {
         $order_category_list = [
             'sort'      => 'desc',
-            'create_at' => 'asc',
+            'update_at' => 'desc',
         ];
-        $category_list = self::field('id, title, create_at')
+        $category_list = self::field('id, title, create_at,update_at')
             ->where(['status' => 0])
             ->order($order_category_list)
             ->select();
