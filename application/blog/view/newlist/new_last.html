@@ -46,11 +46,10 @@
                  <div class="new_list">
                     <h2>联系我们</h2>
                     <ul>
-                        <li>{$SysInfo.Author2}</li>
-                        <li>微信：180-5428-5450</li>
-                        <li>QQ:{$SysInfo.qq}</li>
-                        <li>{$SysInfo.address}</li>
-                        <li><img src="__PUBLIC__/images/wechat.jpg" alt=""></li>
+                        {volist name="config_list" id="vo"}
+                            <li>{$vo.remark}:{$vo.value}</li>
+                        {/volist}
+                        <li><img src="{$ScanFollow}" alt=""></li>
                     </ul>
                 </div>
             </div>

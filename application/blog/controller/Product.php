@@ -35,7 +35,7 @@ class Product extends BlogController {
         
         $where['is_deleted']=0;
         $where['status']=0;
-        $limit = 3;
+        $limit = 8;
         $total = db('blog_product')->count();
         $basic_data = model('Product')->order('update_at', 'desc')->field(['category_id,id,title,cover_img,update_at'])->where($where)->paginate($limit,false,['query'=>request()->param()])->each(function($item,$key){
 

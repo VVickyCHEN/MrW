@@ -115,7 +115,7 @@
         {field: 'title', title: '文章标题', minWidth: 200, align: 'center'},
         {field: 'cover_img', title: '文章封面', width: 100, templet: '#bindCoverImg', align: "center"},
         {field: 'describe', title: '文章描述', minWidth: 100, align: "center"},
-        {field: 'clicks', title: '点击量', width: 100, align: "center", sort: true},
+        {field: 'clicks', title: '点击量', width: 100,edit:"text", align: "center", sort: true},
         // {field: 'commont_total', title: '评论量', width: 100, align: "center", sort: true},
         {field: 'status', title: '启用状态', width: 110, templet: '#checkStatus', unresize: true, align: "center"},
         {field: 'create_at', title: '发布时间', align: 'center', minWidth: 150},
@@ -130,7 +130,8 @@
      */
     $.laydate.range('create_at');
 
-
+    $.form.editField('currentTable', '{:url("$thisRequest")}');
+    
     /**
      * 修改状态
      */

@@ -33,7 +33,7 @@ class Newlist extends BlogController {
 
     public function index() {
         
-        $limit = 3;
+        $limit = 8;
         $total = db('blog_article')->count();
         $basic_data = model('Article')->order('update_at','desc')->field(['clicks,id,title,cover_img,update_at,`describe`'])->paginate($limit);
         // dump($basic_data);die;

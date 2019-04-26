@@ -33,7 +33,7 @@ class Casement extends BlogController {
 
     public function index() {
         $casecategory = $this->request->param('casecategory');
-        $limit = 4;
+        $limit = 8;
         
         $order = [
             'sort'      => 'asc',

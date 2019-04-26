@@ -57,11 +57,10 @@
                  <div class="new_list">
                     <h2>联系我们</h2>
                     <ul>
-                        <li>手机：13000000000</li>
-                        <li>微信：13000000000</li>
-                        <li>Q  Q：903377455</li>
-                        <li>地址：广州市白云区永泰商务中心B219</li>
-                        <li><img src="__PUBLIC__/images/wechat.jpg" alt=""></li>
+                        {volist name="config_list" id="vo"}
+                            <li>{$vo.remark}:{$vo.value}</li>
+                        {/volist}
+                        <li><img src="{$ScanFollow}" alt=""></li>
                     </ul>
                 </div>
             </div>

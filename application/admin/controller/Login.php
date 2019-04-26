@@ -38,10 +38,11 @@ class Login extends Controller {
      */
     public function index() {
         if ($this->request->isGet()) {
+           
 
             //基础数据
             $basic_data = [
-                'title' => '久久PHP社区后台登录',
+                'title' => '得翼网络有限公司后台登录',
                 'data'  => '',
             ];
             $this->assign($basic_data);
@@ -49,7 +50,6 @@ class Login extends Controller {
             return $this->fetch('');
         } else {
             $post = $this->request->post();
-
             //判断是否开启验证码登录选择验证规则
             $SysInfo = Cache::get('SysInfo');
             $SysInfo['VercodeType'] != 1 ? $validate_type = 'app\admin\validate\Login.index_off' : $validate_type = 'app\admin\validate\Login.index_on';

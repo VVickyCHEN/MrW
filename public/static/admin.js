@@ -176,7 +176,7 @@ layui.use(['laydate', 'form', 'layer', 'table', 'laytpl', 'jquery'], function ()
         this.editField = function (tableName, url) {
             table.on('edit(' + tableName + ')', function (obj) {
                 var value = obj.value //修改后的值
-                    , data = obj.data //所在行所有键值
+                    , data = obj.data //所在行所有键值.一串对象
                     , field = obj.field; //字段名称
                 $.request.post(url, {
                     id: data.id,

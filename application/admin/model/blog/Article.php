@@ -61,7 +61,7 @@ class Article extends ModelService {
             $insert = $post;
             unset($insert['tag_list']);
 
-            // $article_id = self::insertGetId($insert);
+            $article->clicks = 300;
             $article->save($insert);
             $article_id = $article->id;
 

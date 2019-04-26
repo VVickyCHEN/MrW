@@ -40,17 +40,28 @@ class Article extends AdminController {
      * @throws \think\exception\DbException
      */
     public function index() {
-        if ($this->request->get('type') == 'ajax') {
-            $page = $this->request->get('page', 1);
-            $limit = $this->request->get('limit', 10);
-            $search = (array)$this->request->get('search', []);
-            return json($this->model->getList($page, $limit, $search));
+        if (!$this->request->isPost()) {
+            if ($this->request->get('type') == 'ajax') {
+                $page = $this->request->get('page', 1);
+                $limit = $this->request->get('limit', 10);
+                $search = (array)$this->request->get('search', []);
+                return json($this->model->getList($page, $limit, $search));
+            }
+            $basic_data = [
+                'title' => '文章列表',
+                'data'  => '',
+            ];
+            return $this->fetch('', $basic_data);
+        } else {
+            $post = $this->request->post();
+
+            //验证数据
+            $validate = $this->validate($post, 'app\admin\validate\Common.edit_field');
+            if (true !== $validate) return __error($validate);
+
+            //保存数据,返回结果
+            return $this->model->editField($post);
         }
-        $basic_data = [
-            'title' => '文章列表',
-            'data'  => '',
-        ];
-        return $this->fetch('', $basic_data);
     }
 
     /**
