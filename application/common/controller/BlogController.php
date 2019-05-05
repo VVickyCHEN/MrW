@@ -65,12 +65,24 @@ class BlogController extends Controller {
 
     protected $product_list = [];//footer的产品
 
+    protected $keyword = [];//关键字和描述
+
     /**
      * 构造函数
      * BlogController constructor.
      */
     public function __construct() {
         parent::__construct();
+
+        // 友情链接
+        $this->keyword = Cache::get('keyword');
+        if(empty($this->keyword)){
+            Db::table('keyword')->cache('keyword',600)->select();
+            $this->keyword = Cache::get('keyword');
+            $this->assign('keyword',$this->keyword);
+        }else{
+            $this->assign('keyword',$this->keyword);
+        }
     
         // 友情链接
         $this->website_link = Cache::get('website_link');

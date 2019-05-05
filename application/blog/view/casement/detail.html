@@ -6,7 +6,9 @@
 	        <ul>
 	            {volist name="cate_list" id="vo"}
 
-	              <li><a href="{:url('@blog/casement/index',['casecategory'=>$vo.id])}">{$vo.title}</a></li>
+	              <li>
+                  <a href="/casement/cate/{$vo.id}.html" class=" {if $vo.id eq $cate}on{/if}">{$vo.title}</a>
+                </li>
 
 	            {/volist}
 

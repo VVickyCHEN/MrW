@@ -58,6 +58,7 @@ class Captcha
      */
     public function __construct($config = [])
     {
+        ob_clean();
         $this->config = array_merge($this->config, $config);
     }
 

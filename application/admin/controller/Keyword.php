@@ -16,10 +16,10 @@ use app\common\controller\AdminController;
 
 /**
  * 系统配置
- * Class Config
+ * Class Keyword
  * @package app\admin\controller
  */
-class Config extends AdminController {
+class Keyword extends AdminController {
 
     /**
      * config模型对象
@@ -32,7 +32,7 @@ class Config extends AdminController {
      */
     public function __construct() {
         parent::__construct();
-        $this->model = model('config');
+        $this->model = model('Keyword');
     }
 
     /**
@@ -50,7 +50,7 @@ class Config extends AdminController {
 
             //基础数据
             $basic_data = [
-                'title' => '系统参数列表',
+                'title' => '关键字列表',
             ];
             $this->assign($basic_data);
 

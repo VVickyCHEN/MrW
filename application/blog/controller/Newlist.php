@@ -52,15 +52,14 @@ class Newlist extends BlogController {
         return $this->fetch();
     }
 
-    public function new_last() {
+    public function new_last($id='') {
         
         if (!$this->request->isPost()) {
-            $id = $this->request->param('id');
             //获取文章信息
-            if (empty($id)) return msg_error('暂无新闻信息，请稍后再试','/blog/newlist');
+            if (empty($id)) return msg_error('暂无新闻信息，请稍后再试','/newlist');
 
             $detail = $this->model->where(['status' => 0, 'is_deleted' => 0, 'id' => $id])->find();
-            if (empty($detail)) return msg_error('暂无文章信息，请稍后再试','/blog/newlist');
+            if (empty($detail)) return msg_error('暂无文章信息，请稍后再试','/newlist');
 
             //新增文章点击量
             $this->model->where(['id' => $id])->setInc('clicks', 1);

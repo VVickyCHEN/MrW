@@ -17,7 +17,7 @@ use app\common\controller\BlogController;
 
 
 /**
- * 博客文章控制器
+ * 博客案例控制器
  * Class Artitle
  * @package app\blog\controller
  */
@@ -31,8 +31,8 @@ class Casement extends BlogController {
     }
 
 
-    public function index() {
-        $casecategory = $this->request->param('casecategory');
+    public function index($cate = '') {
+        
         $limit = 8;
         
         $order = [
@@ -41,14 +41,15 @@ class Casement extends BlogController {
         ];
         
         $cate_list = db('casecategory')->order($order)->field(['id,title,sort,update_at'])->select();
+
         $this->assign('cate_list',$cate_list);
 
-
         // 当前案例
-        if(!empty($casecategory)){
-            $this->assign('casecategory',$casecategory);
-            $total = db('blog_case')->where(['category_id'=>$casecategory])->count();
-            $now_case_list = model('Casement')->order('update_at','desc')->field(['clicks,id,title,cover_img,update_at,`describe`'])->where(['category_id'=>$casecategory])->paginate($limit);
+        if(!empty($cate)){
+            $this->assign('cate',$cate);
+
+            $total = db('blog_case')->where(['category_id'=>$cate])->count();
+            $now_case_list = model('Casement')->order('update_at','desc')->field(['clicks,id,title,cover_img,update_at,`describe`'])->where(['category_id'=>$cate])->paginate($limit);
 
             $this->assign('case_list',$now_case_list);
             $this->assign('total',$total);
@@ -57,11 +58,11 @@ class Casement extends BlogController {
 
             $total = db('blog_case')->where(['category_id'=>$cate_list['0']['id']])->count();
 
-            $now_case_list = model('Casement')->order('update_at','desc')->field(['clicks,id,title,cover_img,update_at,`describe`'])->where(['category_id'=>$cate_list['0']['id']])->paginate($limit);
+            $now_case_list = model('Casement')->order($order)->field(['clicks,id,title,cover_img,update_at,`describe`'])->where(['category_id'=>$cate_list['0']['id']])->paginate($limit);
 
             $this->assign('case_list',$now_case_list);
             $this->assign('total',$total);
-            $this->assign('casecategory',$cate_list['0']['id']);
+            $this->assign('cate',$cate_list['0']['id']);
 
         }
 
@@ -70,17 +71,19 @@ class Casement extends BlogController {
         return $this->fetch();
     }
 
-    public function detail() {
+    public function detail($id = '') {
         
         if (!$this->request->isPost()) {
-            $id = $this->request->param('case_id');
-            //获取文章信息
-            if (empty($id)) return msg_error('暂无案例信息，请稍后再试','/blog/newlist');
+            //获取案例信息
+            if (empty($id)) return msg_error('暂无案例信息，请稍后再试','/casement');
 
-            $detail = $this->model->where(['status' => 0, 'is_deleted' => 0, 'id' => $id])->field('title,describe,content')->find();
-            if (empty($detail)) return msg_error('暂无案例信息，请稍后再试','/blog/newlist');
+            $detail = $this->model->where(['status' => 0, 'is_deleted' => 0, 'id' => $id])->field('title,describe,content,category_id')->find();
 
-            //新增文章点击量
+            $this->assign('cate',$detail['category_id']);
+
+            if (empty($detail)) return msg_error('暂无案例信息，请稍后再试','/casement');
+
+            //新增案例点击量
             $this->model->where(['id' => $id])->setInc('clicks', 1);
 
             $this->assign('detail',$detail);

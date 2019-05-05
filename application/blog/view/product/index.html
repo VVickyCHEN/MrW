@@ -7,7 +7,7 @@
       <div class="fwbq">
           <h2>产品中心</h2>
           <div class="solution_a">
-            当前位置：<a href="index.html">首页&gt;</a><label href="">产品中心</label>
+            当前位置：<a href="{:url('/')}">首页&gt;</a><label href="">产品中心</label>
           </div>
       </div>
       <div class="fwbq-wrap">
@@ -15,7 +15,7 @@
               <ul>
                 {volist name='product_list' id='vo'}
                 <li>
-                  <a href="{:url('@blog/product/detail',['id'=>$vo.id])}">
+                  <a href="/detail/{$vo.id}.html">
                     <img src="{$vo.cover_img|default=''}" alt="">
                     <span></span>
                   </a>

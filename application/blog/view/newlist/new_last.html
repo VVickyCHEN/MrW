@@ -7,7 +7,7 @@
       <div class="fwbq">
           <h2>新闻中心</h2>
           <div class="solution_a">
-            当前位置：<a href="{:url('@blog/index')}">首页&gt;</a><a href="{:url('@blog/new')}">新闻中心&gt;</a><label>新闻标题</label>
+            当前位置：<a href="/">首页&gt;</a><a href="/newlist">新闻中心&gt;</a><label>新闻标题</label>
           </div>
       </div>
       <div class="fwbq-wrap">
@@ -31,7 +31,7 @@
 
                             {volist name="vo.new_list" id="v" key="k"}
                                 <li>
-                                    <a href="{:url('@blog/newlist/new_last',['id'=>$v.id])}">
+                                    <a href="/new_last/{$v.id}.html">
                                         <label>{$k}</label>{$v.title}
                                     </a>
                                 </li>

@@ -16,18 +16,19 @@ namespace app\admin\model;
  */
 use app\common\service\ModelService;
 
+
 /**
  * 系统配置信息
- * Class Config
+ * Class Keyword
  * @package app\admin\model
  */
-class Config extends ModelService {
+class Keyword extends ModelService {
 
     /**
      * 绑定数据表
      * @var string
      */
-    protected $table = 'system_config';
+    protected $table = 'keyword';
 
     /**
      * 获取系统基础配置信息
@@ -55,14 +56,15 @@ class Config extends ModelService {
     public function configList($page = 1, $limit = 500, $search = [], $where = []) {
 
         $where['status'] = 1;//1为显示
+
         //搜索条件
         foreach ($search as $key => $value) {
             !empty($value) && $where[] = [$key, 'LIKE', '%' . $value . '%'];
         }
 
-        $field = 'id, group , name, value, remark, sort, create_at';
+        $field = 'id,name,value,describe,remark,create_at';
         $count = $this->where($where)->count();
-        $data = $this->where($where)->field($field)->order(['sort asc'])->select();
+        $data = $this->where($where)->field($field)->select();
         empty($data) ? $msg = '暂无数据！' : $msg = '查询成功！';
         $info = [
             'limit'        => $limit,

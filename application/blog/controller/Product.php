@@ -21,11 +21,6 @@ class Product extends BlogController {
      */
     protected $model = null;
 
-     /**
-     * 初始化
-     * User constructor.
-     */
-
     public function __construct() {
         parent::__construct();
         $this->model = model('Product');
@@ -33,11 +28,9 @@ class Product extends BlogController {
 
     public function index() {
         
-        $where['is_deleted']=0;
-        $where['status']=0;
         $limit = 8;
         $total = db('blog_product')->count();
-        $basic_data = model('Product')->order('update_at', 'desc')->field(['category_id,id,title,cover_img,update_at'])->where($where)->paginate($limit,false,['query'=>request()->param()])->each(function($item,$key){
+        $basic_data = model('Product')->order('update_at', 'desc')->field(['category_id,id,title,cover_img,update_at'])->paginate($limit,false,['query'=>request()->param()])->each(function($item,$key){
 
         	$cat_id = $item['category_id'];
         	$item['category_name'] = db('Procategory')->where(['id'=>$cat_id])->value('title');
@@ -61,15 +54,14 @@ class Product extends BlogController {
       
     }
 
-    public function detail(){
+    public function detail($id = ''){
 
         if (!$this->request->isPost()) {
-            $id = $this->request->param('id');
             //获取文章信息
-            if (empty($id)) return msg_error('暂无产品信息，请稍后再试');
+            if (empty($id)) return msg_error('暂无产品信息，请稍后再试','/product');
 
-            $detail = $this->model->where(['status' => 0, 'is_deleted' => 0, 'id' => $id])->find();
-            if (empty($detail)) return msg_error('暂无产品信息，请稍后再试');
+            $detail = $this->model->where(['status' => 0, 'id' => $id])->find();
+            if (empty($detail)) return msg_error('暂无产品信息，请稍后再试','/product');
 
             //新增文章点击量
             $this->model->where(['id' => $id])->setInc('clicks', 1);

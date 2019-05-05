@@ -4,29 +4,18 @@
     <meta name="viewport" content="width=1150,target-densitydpi=device-dpi,maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>{$SysInfo.ManageName}</title>
-    <meta name="keywords" content="{$SysInfo.ManageName}">
-    <meta name="description" content="{$SysInfo.description}">
+
+    <meta property="og:keywords" name="keywords" content="{$SysInfo.Keyword}">
+    <meta property="og:description" name="description" content="{$SysInfo.description}">
+
     <link rel="icon" href="__PUBLIC__/picture/icon.png" type="image/x-icon" /> 
     <script type="text/javascript" src="__PUBLIC__/js/jquery_2.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/jquery.lazyload.min_1.js"></script> 
     <script type="text/javascript" src="__PUBLIC__/js/zb_1.js"></script>
     <link href="__PUBLIC__/css/main.css" rel="stylesheet" type="text/css">
     <link href="__PUBLIC__/css/mf.css" rel="stylesheet" type="text/css">
-
     <link rel="stylesheet" href="__STATIC__/plugs/layui/css/layui.css" media="all" />
     <link rel="stylesheet" href="__STATIC__/plugs/font-awesome-4.7.0/css/font-awesome.css" media="all" />
-</head>
-    <!--百度ip统计-->
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?f37400f14441ebc0c3645d104244b130";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    <!--百度ip统计-->
 </head>
 
 
@@ -45,13 +34,24 @@
 
 {block name="script"}
 <script type="text/javascript">
+
     $(document).ready(function() {
+
         /*通过地址栏url激活菜单状态*/
-        $(".nav li a").each(function () {    
+        $(".nav li a").each(function () {   
+
+
             if (String(window.location).startWith($($(this))[0].href)) {
                 $(this).removeAttr("data-hover");
                 $(this).addClass('on').siblings().removeClass("on");
+
+                var keywords = $(this).attr('keywords');
+                var describe = $(this).attr('describe');
+
+                $("[name='description']").attr('content', describe);
+                $("[name='keywords']").attr('content', keywords);
             }
+
         });
     });
 

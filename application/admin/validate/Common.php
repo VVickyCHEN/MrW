@@ -24,7 +24,7 @@ class Common extends Validate {
     protected $rule = [
         'id'    => 'require|number',
         'field' => 'require',
-        'value' => 'require|max:30',
+        'value' => 'require|max:255',
     ];
 
     /**

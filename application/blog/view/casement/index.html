@@ -7,7 +7,7 @@
         <ul>
             {volist name="cate_list" id="vo"}
 
-              <li><a href="{:url('@blog/casement/index',['casecategory'=>$vo.id])}" class=" {if $vo.id eq $casecategory}on{/if}">{$vo.title}</a></li>
+              <li><a href="/casement/cate/{$vo.id}.html" class=" {if $vo.id eq $cate}on{/if}">{$vo.title}</a></li>
 
             {/volist}
 
@@ -18,7 +18,7 @@
               <ul>
                 {volist name="case_list" id="vo"}
                 <li>
-                  <a href="{:url('@blog/casement/detail',['case_id'=>$vo.id])}">
+                  <a href="/case_detail/{$vo.id}.html">
                     <img src="{$vo.cover_img|default=''}" alt="">
                     <p>{$vo.title}</p>
                     <span></span>
